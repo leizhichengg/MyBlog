@@ -1,28 +1,28 @@
 <template>
-  <div class="ivu-col-span-4 ivu-col-lg-offset-1">
+  <div class="m-side">
     <div class="sidebar">
       <!--hot tags-->
       <div class="tag-side">
-        <a href="#" class="side-title">Tags</a>
+        <el-link href="#" class="side-title">Tags</el-link>
         <br><br>
-        <Button shape="circle" class="m-side-tag-button">java</Button>
-        <Button shape="circle" class="m-side-tag-button">python</Button>
-        <Button shape="circle" class="m-side-tag-button">springboot</Button>
-        <Button shape="circle" class="m-side-tag-button">test</Button>
-        <Button shape="circle" class="m-side-tag-button">django</Button>
+        <el-button round size="small" class="m-side-tag-button">java</el-button>
+        <el-button round size="small" class="m-side-tag-button">python</el-button>
+        <el-button round size="small" class="m-side-tag-button">test</el-button>
+        <el-button round size="small" class="m-side-tag-button">item</el-button>
+        <el-button round size="small" class="m-side-tag-button">hahaha</el-button>
       </div>
       <hr>
       <!--hot category-->
       <div class="category-side">
-        <a href="#" class="side-title">Category</a>
+        <el-link href="#" class="side-title">Category</el-link>
         <br><br>
-        <a href="#" class="m-category">category1</a>
+        <el-link href="#" class="m-category">category1</el-link>
         <br>
-        <a href="#" class="m-category">category2</a>
+        <el-link href="#" class="m-category">category2</el-link>
         <br>
-        <a href="#" class="m-category">category3</a>
+        <el-link href="#" class="m-category">category3</el-link>
         <br>
-        <a href="#" class="m-category">category4</a>
+        <el-link href="#" class="m-category">category4</el-link>
       </div>
       <hr>
       <!--about me-->
@@ -42,6 +42,10 @@
 </script>
 
 <style scoped>
+  .m-side {
+    padding-right: 150px;
+  }
+
   .sidebar {
     background: transparent;
     margin-left: 20px;
@@ -49,24 +53,28 @@
     text-align: left;
     color: #cccccc;
   }
+
   .tag-side {
 
   }
+
   .side-title {
     color: #cccccc;
-    font-size: 16px;
+    font-size: 22px;
     font-weight: bolder;
   }
+
   .m-side-tag-button {
-    margin-top: 10px;
-    color: black;
+    margin-bottom: 10px;
   }
+
   hr {
     margin-top: 20px;
     margin-bottom: 20px;
     border: 0;
     border-top: 1px solid #eee;
   }
+
   .m-category {
     font-size: 16px;
     color: #cccccc;

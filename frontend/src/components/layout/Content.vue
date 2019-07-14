@@ -1,13 +1,13 @@
 <template>
-  <div class="ivu-col-span-12 ivu-col-sm-offset-12 ivu-col-xs-offset-12 ivu-col-lg-offset-4 ivu-col-md-offset-4 ">
+  <div class="m-content">
     <div class="post-preview">
-      <a href="#">
+      <el-link :underline="false" href="#">
         <h2 class="post-title">Title test</h2>
         <h3 class="post-subtitle">Subtitle test</h3>
         <div class="post-content-preview">
-          content preview testcontent preview testcontent preview testcontent preview testcontent preview testcontent preview testcontent preview test
+          content preview test content preview test content preview test content preview test content preview test content preview test content preview test
         </div>
-      </a>
+      </el-link>
       <p class="post-meta">
         Post by *** on July 12, 2019
       </p>
@@ -15,13 +15,13 @@
     <hr>
 
     <div class="post-preview">
-      <a href="#">
+      <el-link :underline="false" href="#">
         <h2 class="post-title">Title test</h2>
         <h3 class="post-subtitle">Subtitle test</h3>
         <div class="post-content-preview">
-          content preview testcontent preview testcontent preview testcontent preview testcontent preview testcontent preview testcontent preview test
+          content preview test content preview test content preview test content preview test content preview test content preview test content preview test
         </div>
-      </a>
+      </el-link>
       <p class="post-meta">
         Post by *** on July 12, 2019
       </p>
@@ -29,13 +29,13 @@
     <hr>
 
     <div class="post-preview">
-      <a href="#">
+      <el-link :underline="false" href="#">
         <h2 class="post-title">Title test</h2>
         <h3 class="post-subtitle">Subtitle test</h3>
         <div class="post-content-preview">
-          content preview testcontent preview testcontent preview testcontent preview testcontent preview testcontent preview testcontent preview test
+          content preview test content preview test content preview test content preview test content preview test content preview test content preview test
         </div>
-      </a>
+      </el-link>
       <p class="post-meta">
         Post by *** on July 12, 2019
       </p>
@@ -52,8 +52,12 @@
 </script>
 
 <style scoped>
+  .m-content {
+    padding-left: 150px;
+    padding-right: 20px;
+    background: transparent;
+  }
 .post-preview {
-  background: transparent;
   text-align: left;
 }
 ::selection {

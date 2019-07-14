@@ -1,13 +1,21 @@
 <template>
   <div class="m-nav">
     <div class="container-fluid">
-      <a class="navbar-text navbar-brand" href="/">MyBlog</a>
+      <el-link class="navbar-text navbar-brand" href="/">MyBlog</el-link>
       <div class="m-menu">
-        <a href="/" class="navbar-text ">Home</a>
-        <a href="/archive" class="navbar-text ">Archive</a>
-        <a href="/category" class="navbar-text ">Category</a>
-        <a href="/tag" class="navbar-text ">Tag</a>
-        <Input class="m-search" v-model="searchValue" icon="ios-search-outline" size="large" placeholder="Search something..." style="width: 250px" />
+        <router-link to="/">
+          <el-link class="navbar-text ">Home</el-link>
+        </router-link>
+        <router-link to="/archive">
+          <el-link class="navbar-text ">Archive</el-link>
+        </router-link>
+        <router-link to="/category">
+          <el-link href="/category" class="navbar-text ">Category</el-link>
+        </router-link>
+        <router-link to="/tag">
+          <el-link href="/tag" class="navbar-text ">Tag</el-link>
+        </router-link>
+        <el-input class="m-search" v-model="input" suffix-icon="el-icon-search" placeholder="Search something..."></el-input>
       </div>
     </div>
   </div>
@@ -40,11 +48,12 @@
     float: right;
     font-weight: bold;
     color: white;
+    text-align: center;
   }
   .m-search {
     float: right;
     vertical-align: center;
-    margin-top: 12px;
+    width: 250px;
   }
   .navbar-text {
     font-size: 16px;
