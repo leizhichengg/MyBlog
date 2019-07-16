@@ -12,14 +12,23 @@
           <el-button round size="small" class="m-side-tag-button">2019 <sup> 2</sup></el-button>
           <el-button round size="small" class="m-side-tag-button">2018 <sup> 2</sup></el-button>
         </div>
-        <div class="m-time-title">
-          2019
-        </div>
-        <!--post list-->
-        <div class="m-post-list">
-          <section>
-            <h1>test</h1>
-          </section>
+        <div class="time-block">
+          <div class="m-time-title">
+            2019
+          </div>
+          <!--post list-->
+          <div class="m-post-list">
+            <div class="m-post">
+              <h3>Post title</h3>
+              <h4>2019-2-9</h4>
+              <hr>
+            </div>
+            <div class="m-post">
+              <h3>Post title</h3>
+              <h4>2019-2-9</h4>
+              <hr>
+            </div>
+          </div>
         </div>
       </el-col>
     </el-row>
@@ -35,9 +44,7 @@
   export default {
     name: 'Archive',
     data () {
-      return {
-
-      }
+      return {}
     },
     components: {
       Header,
@@ -62,17 +69,30 @@
     height: 300px;
     color: white;
   }
+
   .m-title {
     font-size: 45px;
     padding-top: 150px;
     text-align: center;
   }
+
   .m-time-tag {
     margin-top: 36px;
     text-align: left;
   }
+
   .m-time-title {
     margin-top: 24px;
     text-align: left;
+  }
+  .m-post-list {
+    text-align: left;
+    padding-left: 12px;
+  }
+  hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
   }
 </style>

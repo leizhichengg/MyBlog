@@ -7,6 +7,7 @@
     <el-row :gutter="20">
       <el-col :span="16">
         <b-content></b-content>
+        <b-page/>
       </el-col>
       <el-col :span="8">
         <b-sider></b-sider>
@@ -22,6 +23,7 @@
   import Navbar from '@/components/layout/Navbar'
   import Content from '@/components/layout/Content'
   import Sider from '@/components/layout/Sider'
+  import Page from '@/components/layout/Page'
 
   export default {
     name: 'Home',
@@ -36,6 +38,7 @@
       'b-footer': Footer,
       'b-content': Content,
       'b-sider': Sider,
+      'b-page': Page,
     }
   }
 </script>

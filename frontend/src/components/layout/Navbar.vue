@@ -26,7 +26,7 @@
     name: 'Navbar',
     data () {
       return {
-        searchValue: ''
+        input: ''
       }
     }
   }

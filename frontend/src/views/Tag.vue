@@ -1,9 +1,37 @@
 <template>
   <div>
     <b-nav/>
-    <div class="a-header">
+    <header class="a-header">
       <h1 class="m-title">Tag</h1>
-    </div>
+    </header>
+    <!--Main content-->
+    <el-row :gutter="20">
+      <el-col :span="14" :offset="5">
+        <div class="m-tag">
+          <el-button round size="small" class="m-side-tag-button">All <sup> 2</sup></el-button>
+          <el-button round size="small" class="m-side-tag-button">前端 <sup> 2</sup></el-button>
+          <el-button round size="small" class="m-side-tag-button">后端 <sup> 2</sup></el-button>
+        </div>
+        <div class="tag-block">
+          <div class="m-tag-title">
+            前端
+          </div>
+          <!--post list-->
+          <div class="m-post-list">
+            <div class="m-post">
+              <h3>Post title</h3>
+              <h4>2019-2-9</h4>
+              <hr>
+            </div>
+            <div class="m-post">
+              <h3>Post title</h3>
+              <h4>2019-2-9</h4>
+              <hr>
+            </div>
+          </div>
+        </div>
+      </el-col>
+    </el-row>
     <b-footer/>
   </div>
 </template>
@@ -11,6 +39,7 @@
 <script>
   import Navbar from '@/components/layout/Navbar'
   import Footer from '@/components/layout/Footer'
+  import Header from '../components/layout/Header'
 
   export default {
     name: 'Tag',
@@ -20,6 +49,7 @@
       }
     },
     components: {
+      Header,
       'b-nav': Navbar,
       'b-footer': Footer,
 
@@ -46,5 +76,24 @@
     font-size: 45px;
     padding-top: 150px;
     text-align: center;
+  }
+  .m-tag {
+    margin-top: 36px;
+    text-align: left;
+  }
+
+  .m-tag-title {
+    margin-top: 24px;
+    text-align: left;
+  }
+  .m-post-list {
+    text-align: left;
+    padding-left: 12px;
+  }
+  hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
   }
 </style>
