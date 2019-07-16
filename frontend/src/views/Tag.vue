@@ -32,11 +32,12 @@
     background: #ccc url("../assets/img/tag-bg.jpg") scroll;
     background-size: cover;
     padding: 0 50px;
-    text-align: left;
-    width: 1200px;
-    margin-left: -28px;
+    /*text-align: left;*/
+    /*width: 1200px;*/
+    margin-left: -8px;
+    margin-right: -8px;
     margin-top: -136px;
-    max-width: 100%;
+    /*max-width: 100%;*/
     height: 300px;
     color: white;
   }
