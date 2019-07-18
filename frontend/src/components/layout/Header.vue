@@ -17,7 +17,7 @@
 
 <style scoped>
   .m-header {
-    background: #ccc url("../../assets/img/home-bg.jpg") scroll;
+    background: #ccc url("/static/img/home-bg.jpg") scroll;
     background-size: cover;
     /*padding: 0 20px;*/
     /*width: 1400px;*/

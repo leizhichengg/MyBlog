@@ -59,7 +59,7 @@
 
 <style scoped>
   .a-header {
-    background: #ccc url("../assets/img/tag-bg.jpg") scroll;
+    background: #ccc url("/static/img/tag-bg.jpg") scroll;
     background-size: cover;
     padding: 0 50px;
     /*text-align: left;*/
