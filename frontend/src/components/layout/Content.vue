@@ -1,13 +1,13 @@
 <template>
   <div class="m-content">
     <div class="post-preview">
-      <el-link :underline="false" href="#">
+      <router-link to="/post" class="router-link-active">
         <h2 class="post-title">Title test</h2>
         <h3 class="post-subtitle">Subtitle test</h3>
         <div class="post-content-preview">
           content preview test content preview test content preview test content preview test content preview test content preview test content preview test
         </div>
-      </el-link>
+      </router-link>
       <p class="post-meta">
         Post by *** on July 12, 2019
       </p>
@@ -95,4 +95,7 @@ hr {
   border: 0;
   border-top: 1px solid #eee;
 }
+  .router-link-active{
+    text-decoration: none;
+  }
 </style>

@@ -15,6 +15,7 @@
         <router-link to="/tag">
           <el-link href="/tag" class="navbar-text ">Tag</el-link>
         </router-link>
+        &nbsp;&nbsp;
         <el-input class="m-search" v-model="input" suffix-icon="el-icon-search" placeholder="Search something..."></el-input>
       </div>
     </div>
@@ -35,7 +36,7 @@
 <style scoped>
   .m-nav {
     height: 60px;
-    line-height: 60px
+    line-height: 60px;
   }
   .container-fluid {
     padding-right: 15px;
@@ -47,7 +48,7 @@
   .m-menu {
     float: right;
     font-weight: bold;
-    color: white;
+    /*color: white;*/
     text-align: center;
   }
   .m-search {
@@ -57,7 +58,7 @@
   }
   .navbar-text {
     font-size: 16px;
-    color: white;
+    color: #404040;
     margin-left: -15px;
     padding: 20px;
     line-height: 20px;
