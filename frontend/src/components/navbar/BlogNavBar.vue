@@ -24,7 +24,7 @@
 
 <script>
   export default {
-    name: 'Navbar',
+    name: 'BlogNavBar',
     data () {
       return {
         input: ''

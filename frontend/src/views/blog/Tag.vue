@@ -39,7 +39,7 @@
 <script>
   import Navbar from '@/components/layout/Navbar'
   import Footer from '@/components/layout/Footer'
-  import Header from '../components/layout/Header'
+  import Header from '../../components/layout/Header'
 
   export default {
     name: 'Tag',
