@@ -1,5 +1,6 @@
 <template>
   <div class="m-login">
+    <a-nav/>
     <el-row :gutter="20">
       <el-col :span="8" :offset="8" class="login-block">
         <el-card class="box-card">
@@ -32,9 +33,11 @@
 </template>
 
 <script>
+  import Navbar from '@/components/navbar/AdminNavBar'
+
   export default {
-    name: "Login",
-    data() {
+    name: 'Login',
+    data () {
       return {
         userForm: {
           account: '',
@@ -55,8 +58,11 @@
         checked: true
       }
     },
+    components: {
+      'a-nav': Navbar,
+    },
     methods: {
-      login(formName) {
+      login (formName) {
         let that = this
         this.$refs[formName].validate((valid) => {
           if (valid) {
@@ -64,13 +70,13 @@
               that.$router.go(-1)
             }).catch((error) => {
               if (error !== 'error') {
-                that.$message({message: error, type: 'error', showClose: true});
+                that.$message({message: error, type: 'error', showClose: true})
               }
             })
           } else {
-            return false;
+            return false
           }
-        });
+        })
       }
     }
   }

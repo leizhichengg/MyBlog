@@ -37,7 +37,7 @@
 </template>
 
 <script>
-  import Navbar from '@/components/layout/Navbar'
+  import Navbar from '@/components/navbar/BlogNavBar'
   import Footer from '@/components/layout/Footer'
 
   export default {

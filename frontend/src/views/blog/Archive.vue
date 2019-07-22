@@ -37,7 +37,7 @@
 </template>
 
 <script>
-  import Navbar from '@/components/layout/Navbar'
+  import Navbar from '@/components/navbar/HomeNavBar'
   import Footer from '@/components/layout/Footer'
   // import Header from '../components/layout/Header'
 

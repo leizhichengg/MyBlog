@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/Home'
-import Archive from '@/views/Archive'
-import Category from '@/views/Category'
-import Tag from '@/views/Tag'
-import Post from '@/views/Post'
+import Home from '@/views/blog/Home'
+import Archive from '@/views/blog/Archive'
+import Category from '@/views/blog/Category'
+import Tag from '@/views/blog/Tag'
+import Post from '@/views/blog/Post'
+import Login from '@/views/admin/Login'
 
 Vue.use(Router)
 
@@ -34,6 +35,17 @@ export default new Router({
       path: '/post',
       name: 'Post',
       component: Post
+    },
+    //Admin
+    {
+      path: '/admin',
+      name: 'Admin',
+      component: Login
+    },
+    {
+      path: '/admin/login',
+      name: 'Login',
+      component: Login
     },
   ]
 })

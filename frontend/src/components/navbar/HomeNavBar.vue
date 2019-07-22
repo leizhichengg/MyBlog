@@ -24,7 +24,7 @@
 
 <script>
   export default {
-    name: 'BlogNavBar',
+    name: 'HomeNavBar',
     data () {
       return {
         input: ''
@@ -58,7 +58,7 @@
   }
   .navbar-text {
     font-size: 16px;
-    color: #404040;
+    color: white;
     margin-left: -15px;
     padding: 20px;
     line-height: 20px;

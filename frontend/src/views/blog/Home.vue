@@ -20,7 +20,7 @@
 <script>
   import Header from '@/components/layout/Header'
   import Footer from '@/components/layout/Footer'
-  import Navbar from '@/components/layout/Navbar'
+  import Navbar from '@/components/navbar/HomeNavBar'
   import Content from '@/components/layout/Content'
   import Sider from '@/components/layout/Sider'
   import Page from '@/components/layout/Page'
