@@ -37,8 +37,8 @@
 </template>
 
 <script>
-  import Navbar from '@/components/navbar/BlogNavBar'
-  import Footer from '@/components/layout/Footer'
+  import Navbar from '@/components/blog/navbar/BlogNavBar'
+  import Footer from '@/components/blog/Footer'
 
   export default {
     name: 'Post',

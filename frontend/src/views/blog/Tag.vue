@@ -37,9 +37,9 @@
 </template>
 
 <script>
-  import Navbar from '@/components/navbar/HomeNavBar'
-  import Footer from '@/components/layout/Footer'
-  import Header from '../../components/layout/Header'
+  import Navbar from '@/components/blog/navbar/HomeNavBar'
+  import Footer from '@/components/blog/Footer'
+  import Header from '@/components/blog/Header'
 
   export default {
     name: 'Tag',

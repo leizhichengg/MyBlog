@@ -18,12 +18,12 @@
 </template>
 
 <script>
-  import Header from '@/components/layout/Header'
-  import Footer from '@/components/layout/Footer'
-  import Navbar from '@/components/navbar/HomeNavBar'
-  import Content from '@/components/layout/Content'
-  import Sider from '@/components/layout/Sider'
-  import Page from '@/components/layout/Page'
+  import Header from '@/components/blog/Header'
+  import Footer from '@/components/blog/Footer'
+  import Navbar from '@/components/blog/navbar/HomeNavBar'
+  import Content from '@/components/blog/Content'
+  import Sider from '@/components/blog/Sider'
+  import Page from '@/components/blog/Page'
 
   export default {
     name: 'Home',
