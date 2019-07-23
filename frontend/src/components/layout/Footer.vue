@@ -2,11 +2,11 @@
   <div class="m-footer">
     <el-divider></el-divider>
     <a class="m-icon" target="_blank" href="#">
-      <i class="el-icon-ali-github"></i>
+      <i class="el-icon-ali-github-fill"></i>
     </a>
     &nbsp;&nbsp;
     <a class="m-icon" target="_blank" href="#">
-      <i class="el-icon-ali-linkedin"></i>
+      <i class="el-icon-ali-linkedin-fill"></i>
     </a>
     <br>
     <p>Copyright © lzc Blog 2019</p>

@@ -1,79 +1,115 @@
 <template>
   <div class="m-login">
-    <a-nav/>
     <el-row :gutter="20">
       <el-col :span="8" :offset="8" class="login-block">
         <el-card class="box-card">
-          <div slot="header" class="clearfix">
-            <span class="login-title">MyBlog</span>
-          </div>
-          <el-form ref="userForm" :model="userForm" :rules="rules" class="m-form">
-            <el-form-item prop="account">
-              <el-input placeholder="Username" v-model="userForm.account"></el-input>
+
+          <el-form ref="loginFrom" :model="loginForm" :rules="loginRules" class="login-form" auto-complete="on"
+                   label-position="left">
+
+            <div class="title-container">
+              <h3 class="login-title">MyBlog</h3>
+            </div>
+
+            <el-form-item prop="username">
+              <el-input
+                ref="username"
+                v-model="loginForm.username"
+                placeholder="Username"
+                prefix-icon="el-icon-ali-user"
+                name="username"
+                type="text"
+                tabindex="1"
+                auto-complete="on"
+                ></el-input>
             </el-form-item>
 
             <el-form-item prop="password">
-              <el-input placeholder="Password" type="password" v-model="userForm.password"></el-input>
+              <el-input
+                :key="passwordType"
+                ref="password"
+                v-model="loginForm.password"
+                :type="passwordType"
+                placeholder="Password"
+                prefix-icon="el-icon-ali-lock"
+                name="password"
+                tabindex="2"
+                auto-complete="on"
+                @keyup.enter.native="handleLogin"
+                show-password="true"
+              ></el-input>
             </el-form-item>
 
-            <el-form-item>
-              <el-checkbox v-model="checked">Remember me</el-checkbox>
-              <router-link to="#">Forgot your password?</router-link>
-            </el-form-item>
+            <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;" @click.native.prevent="handleLogin">Login</el-button>
 
-            <el-form-item class="me-login-button">
-              <el-button round @click.native.prevent="login('userForm')">Log in</el-button>
-            </el-form-item>
+            <div class="tips">
+              <span style="margin-right:20px;">username: admin</span>
+              <span> password: any</span>
+            </div>
+
           </el-form>
-        </el-card>
 
+        </el-card>
       </el-col>
     </el-row>
   </div>
 </template>
 
 <script>
-  import Navbar from '@/components/navbar/AdminNavBar'
+  import { validUsername } from '@/utils/validate'
 
   export default {
     name: 'Login',
     data () {
+      const validateUsername = (rule, value, callback) => {
+        if (!validUsername(value)) {
+          callback(new Error('Please enter the correct user name'))
+        } else {
+          callback()
+        }
+      }
+      const validatePassword = (rule, value, callback) => {
+        if (value.length < 6) {
+          callback(new Error('The password can not be less than 6 digits'))
+        } else {
+          callback()
+        }
+      }
       return {
-        userForm: {
-          account: '',
-          password: '',
+        loginForm: {
+          username: 'admin',
+          password: '111111'
         },
-        rules: {
-          account: {
-            require: true,
-            message: 'please input your username',
-            trigger: 'blur'
-          },
-          password: {
-            require: true,
-            message: 'please input your password',
-            trigger: 'blur'
-          }
+        loginRules: {
+          username: [{ required: true, trigger: 'blur', validator: validateUsername }],
+          password: [{ required: true, trigger: 'blur', validator: validatePassword }]
         },
-        checked: true
+        loading: false,
+        passwordType: 'password',
+        redirect: undefined
       }
     },
-    components: {
-      'a-nav': Navbar,
+    watch: {
+      $route: {
+        handler: function(route) {
+          this.redirect = route.query && route.query.redirect
+        },
+        immediate: true
+      }
     },
     methods: {
-      login (formName) {
-        let that = this
-        this.$refs[formName].validate((valid) => {
+      handleLogin() {
+        this.$refs.loginForm.validate(valid => {
           if (valid) {
-            that.$store.dispatch('login', that.userForm).then(() => {
-              that.$router.go(-1)
-            }).catch((error) => {
-              if (error !== 'error') {
-                that.$message({message: error, type: 'error', showClose: true})
-              }
+            this.loading = true
+            this.$store.dispatch('user/login', this.loginForm).then(() => {
+              this.$router.push({ path: this.redirect || '/' })
+              this.loading = false
+            }).catch(() => {
+              this.loading = false
             })
           } else {
+            console.log('error submit!!')
             return false
           }
         })
@@ -98,9 +134,10 @@
     font-weight: bolder;
   }
 
-  .m-form {
+  .login-form {
     /*width: 350px;*/
     margin-left: 20px;
     margin-right: 20px;
   }
+
 </style>
