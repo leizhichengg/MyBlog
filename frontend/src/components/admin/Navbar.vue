@@ -2,13 +2,14 @@
   <div class="a-navbar">
 
 
+    <!--Navbar Dropdown Menu-->
     <div class="nav-menu">
       <el-dropdown class="a-dropdown">
       <span class="el-dropdown-link">
         Username<i class="el-icon-arrow-down el-icon--right"></i>
       </span>
         <el-dropdown-menu slot="dropdown">
-          <router-link to="/admin">
+          <router-link to="/admin/dashboard">
             <el-dropdown-item>Home</el-dropdown-item>
           </router-link>
           <a target="_blank" href="https://github.com/withlzc/MyBlog">
@@ -34,8 +35,8 @@
     overflow: hidden;
     position: relative;
     background: #fff;
-    box-shadow: 0 1px 4px rgba(0,21,41,.08);
-    margin: -8px;
+    box-shadow: 0 1px 4px rgba(0, 21, 41, .08);
+    margin-right: -8px;
 
   }
 
@@ -57,10 +58,6 @@
   hr {
     border: 0;
     border-top: 1px solid #eee;
-  }
-
-  .router-link-active {
-    text-decoration: none;
   }
 
   a {
