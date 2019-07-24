@@ -1,7 +1,7 @@
 <template>
   <div class="a-navbar">
-
-
+    <hamburger class="hamburger-container"></hamburger>
+    <breadcrumb class="breadcrumb-container"></breadcrumb>
     <!--Navbar Dropdown Menu-->
     <div class="nav-menu">
       <el-dropdown class="a-dropdown">
@@ -24,8 +24,11 @@
 </template>
 
 <script>
+  import Hamburger from './Hamburger'
+  import Breadcrumb from './Breadcrumb'
   export default {
-    name: 'Navbar'
+    name: 'Navbar',
+    components: {Breadcrumb, Hamburger}
   }
 </script>
 
@@ -62,6 +65,21 @@
 
   a {
     text-decoration: none;
+  }
+
+  .hamburger-container {
+    line-height: 50px;
+    /*height: 100%;*/
+    float: left;
+    cursor: pointer;
+    margin-right: 12px;
+    /*transition: background .3s;*/
+    /*-webkit-tap-highlight-color:transparent;*/
+  }
+
+  .breadcrumb-container {
+    float: left;
+    line-height: 50px;
   }
 
 

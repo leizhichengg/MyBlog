@@ -23,7 +23,7 @@
   .sidebar-container {
     transition: width 0.28s;
     width: 200px !important;
-    background-color: #fff;
+    /*background-color: #fff;*/
     height: 100%;
     position: fixed;
     font-size: 0px;

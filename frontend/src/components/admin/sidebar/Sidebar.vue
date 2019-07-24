@@ -1,7 +1,16 @@
 <template>
   <div class="a-side">
     <el-scrollbar wrap-class="scrollbar-wrapper">
-      <el-menu mode="vertical" @open="handleOpen" @close="handleClose" :collapse="isCollapse">
+      <el-menu
+        mode="vertical"
+        @open="handleOpen"
+        @close="handleClose"
+        :collapse="isCollapse"
+        background-color=""
+        text-color=""
+        active-text-color=""
+        
+      >
 
         <el-menu-item index="1">
           <router-link to="/admin/dashboard">
@@ -81,7 +90,7 @@
     name: 'Sidebar',
     data() {
       return {
-        isCollapse: true
+        isCollapse: false
       };
     },
     methods: {
