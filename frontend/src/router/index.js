@@ -6,6 +6,7 @@ import Category from '@/views/blog/Category'
 import Tag from '@/views/blog/Tag'
 import Post from '@/views/blog/Post'
 import Login from '@/views/admin/Login'
+import Layout from '../views/admin/Layout'
 
 Vue.use(Router)
 
@@ -36,11 +37,19 @@ export default new Router({
       name: 'Post',
       component: Post
     },
+
     //Admin
     {
       path: '/admin',
-      name: 'Admin',
-      component: Login
+      name: 'Dashboard',
+      component: Layout,
+      redirect: '/admin/dashboard',
+      children: [{
+        path: 'dashboard',
+        name: 'Dashboard',
+        component: () => import('@/views/admin/Dashboard'),
+        meta: { title: 'Dashboard', icon: 'dashboard' }
+      }]
     },
     {
       path: '/admin/login',
