@@ -1,10 +1,10 @@
 <template>
   <div class="a-layout">
 
-
     <sidebar class="sidebar-container"/>
     <div class="main-container">
       <navbar/>
+      <appmain/>
     </div>
   </div>
 
@@ -13,9 +13,10 @@
 <script>
   import Sidebar from '../../components/admin/sidebar/Sidebar'
   import Navbar from '../../components/admin/Navbar'
+  import Appmain from '../../components/admin/Appmain'
   export default {
     name: 'Layout',
-    components: {Navbar, Sidebar}
+    components: {Appmain, Navbar, Sidebar}
   }
 </script>
 

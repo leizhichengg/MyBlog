@@ -40,6 +40,11 @@ export default new Router({
 
     //Admin
     {
+      path: '/admin/login',
+      name: 'Login',
+      component: Login
+    },
+    {
       path: '/admin',
       name: 'Dashboard',
       component: Layout,
@@ -52,9 +57,53 @@ export default new Router({
       }]
     },
     {
-      path: '/admin/login',
-      name: 'Login',
-      component: Login
+      path: '/admin/posts',
+      component: Layout,
+      redirect: '/admin/posts/all-posts',
+      name: 'Posts',
+      meta: { title: 'Posts', icon: 'posts' },
+      children: [
+        {
+          path: 'all-posts',
+          name: 'Allposts',
+          component: () => import('@/views/admin/Allposts'),
+          // meta: { title: 'Table', icon: 'table' }
+        },
+        {
+          path: 'categories',
+          name: 'Categories',
+          component: () => import('@/views/admin/Categories'),
+          // meta: { title: 'Tree', icon: 'tree' }
+        },
+        {
+          path: 'tags',
+          name: 'Tags',
+          component: () => import('@/views/admin/Tags'),
+          // meta: { title: 'Tree', icon: 'tree' }
+        },
+      ]
+    },
+    {
+      path: '/admin',
+      name: 'Media',
+      component: Layout,
+      children: [{
+        path: 'media',
+        name: 'Media',
+        component: () => import('@/views/admin/Media'),
+        meta: { title: 'Media', icon: 'media' }
+      }]
+    },
+    {
+      path: '/admin',
+      name: 'Comments',
+      component: Layout,
+      children: [{
+        path: 'comments',
+        name: 'Comments',
+        component: () => import('@/views/admin/Comments'),
+        meta: { title: 'Comments', icon: 'comments' }
+      }]
     },
   ]
 })
