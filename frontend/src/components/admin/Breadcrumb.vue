@@ -1,9 +1,8 @@
 <template>
   <el-breadcrumb class="app-breadcrumb" separator="/">
 
-    <el-breadcrumb-item :to="{ path: '/admin' }">Admin</el-breadcrumb-item>
-    <el-breadcrumb-item><a href="/">Dashboard</a></el-breadcrumb-item>
-    <el-breadcrumb-item>Posts</el-breadcrumb-item>
+    <el-breadcrumb-item :to="{ path: '/admin' }">Dashboard</el-breadcrumb-item>
+    <el-breadcrumb-item><a href="/">Posts</a></el-breadcrumb-item>
     <el-breadcrumb-item>New post</el-breadcrumb-item>
   </el-breadcrumb>
 </template>

@@ -24,25 +24,31 @@
             <span slot="title">Posts</span>
           </template>
           <el-menu-item index="2-1">
-            <span slot="title">All Posts</span>
+            <router-link to="/admin/posts/all-posts">
+              <span>All Posts</span>
+            </router-link>
           </el-menu-item>
           <el-menu-item index="2-2">
-            Categories
+            <router-link to="/admin/posts/categories">
+              <span>Categories</span>
+            </router-link>
           </el-menu-item>
           <el-menu-item index="2-3">
-            Tags
+            <router-link to="/admin/posts/tags">
+              <span>Tags</span>
+            </router-link>
           </el-menu-item>
         </el-submenu>
 
         <el-menu-item index="3">
-          <router-link to="/admin/dashboard">
+          <router-link to="/admin/media">
             <i class="el-icon-ali-tag"></i>
             <span>Media</span>
           </router-link>
         </el-menu-item>
 
         <el-menu-item index="4">
-          <router-link to="/admin/dashboard">
+          <router-link to="/admin/comments">
             <i class="el-icon-ali-comment"></i>
             <span>Comments</span>
           </router-link>
