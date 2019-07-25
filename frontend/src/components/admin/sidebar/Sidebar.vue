@@ -9,7 +9,6 @@
         background-color=""
         text-color=""
         active-text-color=""
-        
       >
 
         <el-menu-item index="1">
@@ -22,64 +21,33 @@
         <el-submenu index="2">
           <template slot="title">
             <i class="el-icon-ali-post"></i>
-            <span slot="title">Post</span>
+            <span slot="title">Posts</span>
           </template>
           <el-menu-item index="2-1">
-            <span slot="title">Add</span>
+            <span slot="title">All Posts</span>
           </el-menu-item>
           <el-menu-item index="2-2">
-            Edit
+            Categories
           </el-menu-item>
           <el-menu-item index="2-3">
-            Delete
+            Tags
           </el-menu-item>
         </el-submenu>
 
-        <el-submenu index="3">
-          <template slot="title">
-            <i class="el-icon-ali-tag"></i>
-            <span slot="title">Tag</span>
-          </template>
-          <el-menu-item index="3-1">
-            <span slot="title">Add</span>
-          </el-menu-item>
-          <el-menu-item index="3-2">
-            Edit
-          </el-menu-item>
-          <el-menu-item index="3-3">
-            Delete
-          </el-menu-item>
-        </el-submenu>
-
-        <el-submenu index="4">
-          <template slot="title">
-            <i class="el-icon-ali-category"></i>
-            <span slot="title">Category</span>
-          </template>
-          <el-menu-item index="4-1">
-            <span slot="title">Add</span>
-          </el-menu-item>
-          <el-menu-item index="4-2">
-            Edit
-          </el-menu-item>
-          <el-menu-item index="4-3">
-            Delete
-          </el-menu-item>
-        </el-submenu>
-
-        <el-menu-item index="5">
+        <el-menu-item index="3">
           <router-link to="/admin/dashboard">
-            <i class="el-icon-ali-comment"></i>
-            <span>Comment</span>
+            <i class="el-icon-ali-tag"></i>
+            <span>Media</span>
           </router-link>
         </el-menu-item>
 
-        <el-menu-item>test</el-menu-item>
-        <el-menu-item>test</el-menu-item>
-        <el-menu-item>test</el-menu-item>
-        <el-menu-item>test</el-menu-item>
-        <el-menu-item>test</el-menu-item>
-        <el-menu-item>test</el-menu-item>
+        <el-menu-item index="4">
+          <router-link to="/admin/dashboard">
+            <i class="el-icon-ali-comment"></i>
+            <span>Comments</span>
+          </router-link>
+        </el-menu-item>
+
       </el-menu>
     </el-scrollbar>
   </div>

@@ -72,7 +72,6 @@
     /*height: 100%;*/
     float: left;
     cursor: pointer;
-    margin-right: 12px;
     /*transition: background .3s;*/
     /*-webkit-tap-highlight-color:transparent;*/
   }
