@@ -11,7 +11,7 @@
 </template>
 
 <script>
-  import Sidebar from '../../components/admin/sidebar/Sidebar'
+  import Sidebar from '../../components/admin/Sidebar'
   import Navbar from '../../components/admin/Navbar'
   import Appmain from '../../components/admin/Appmain'
   export default {
