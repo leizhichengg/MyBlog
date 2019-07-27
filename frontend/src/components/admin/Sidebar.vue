@@ -6,21 +6,20 @@
         @open="handleOpen"
         @close="handleClose"
         :collapse="isCollapse"
-        background-color=""
-        text-color=""
-        active-text-color=""
-      >
+        background-color="#2A3F54"
+        text-color="#E1E1E1"
+        active-text-color="">
 
         <el-menu-item index="1">
           <router-link to="/admin/dashboard">
-            <i class="el-icon-ali-dashboard"></i>
+            <i class="el-icon-ali-dashboard1"></i>
             <span>Dashboard</span>
           </router-link>
         </el-menu-item>
 
         <el-submenu index="2">
           <template slot="title">
-            <i class="el-icon-ali-post"></i>
+            <i class="el-icon-ali-article-fill"></i>
             <span slot="title">Posts</span>
           </template>
           <el-menu-item index="2-1">
@@ -42,7 +41,7 @@
 
         <el-menu-item index="3">
           <router-link to="/admin/media">
-            <i class="el-icon-ali-tag"></i>
+            <i class="el-icon-ali-permmedia"></i>
             <span>Media</span>
           </router-link>
         </el-menu-item>
@@ -79,6 +78,10 @@
 </script>
 
 <style scoped>
+  .a-side {
+    font-weight: bolder;
+  }
+
   .scrollbar-wrapper {
     overflow-x: hidden !important;
   }
@@ -100,6 +103,7 @@
     width: 100%;
     overflow: hidden;
     text-decoration: none;
+    color: #E1E1E1;
   }
 
   .el-menu {
