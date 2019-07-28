@@ -78,6 +78,7 @@
 </script>
 
 <style scoped>
+
   .a-side {
     font-weight: bolder;
   }

@@ -7,6 +7,7 @@ import Tag from '@/views/blog/Tag'
 import Post from '@/views/blog/Post'
 import Login from '@/views/admin/Login'
 import Layout from '../views/admin/Layout'
+import Newpost from '../views/admin/Newpost'
 
 Vue.use(Router)
 
@@ -67,6 +68,11 @@ export const constantRoutes = [
         name: 'Allposts',
         component: () => import('@/views/admin/Allposts'),
         // meta: { title: 'Table', icon: 'table' }
+      },
+      {
+        path: 'new-post',
+        name: Newpost,
+        component: () => import('@/views/admin/Newpost')
       },
       {
         path: 'categories',

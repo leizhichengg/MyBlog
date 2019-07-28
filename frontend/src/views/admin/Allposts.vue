@@ -58,7 +58,9 @@
         </el-table-column>
       </el-table>
       <div class="new-post">
-        <el-button type="primary" class="m-button">New Post</el-button>
+        <router-link to="/admin/posts/new-post">
+          <el-button type="primary" class="m-button">New Post</el-button>
+        </router-link>
       </div>
     </el-card>
   </div>
