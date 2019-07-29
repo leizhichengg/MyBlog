@@ -1,7 +1,7 @@
 <template>
   <div class="m-login">
     <el-row>
-      <el-col :span="6" :offset="9" class="login-block">
+      <el-col :span="8" :offset="8">
         <el-card class="box-card">
 
           <el-form ref="loginFrom" :model="loginForm" :rules="loginRules" class="login-form" auto-complete="on"
@@ -101,23 +101,36 @@
     },
     methods: {
       handleLogin () {
-        this.$refs.loginForm.validate(valid => {
-          if (valid) {
-            // this.loading = true
-            this.$store.dispatch('login', this.loginForm).then(() => {
-              this.$router.push({path: '/'})
-              // this.loading = false
-            }).catch((error) => {
-              if (error !== 'error') {
-                this.$message({message: error, type: 'error', showClose: true})
-              }
-              // this.loading = false
-            })
-          } else {
-            console.log('error submit!!')
-            return false
-          }
-        })
+        this.$axios
+          .post('/login', {
+            username: this.loginForm.username,
+            password: this.loginForm.password
+          })
+          .then(successResponse => {
+            this.responseResult = JSON.stringify(successResponse.data)
+            if (successResponse.data.code === 200) {
+              this.$router.replace({path: '/admin'})
+            }
+          })
+          .catch(failResponse => {
+          })
+        // this.$refs.loginForm.validate(valid => {
+        //   if (valid) {
+        //     // this.loading = true
+        //     this.$store.dispatch('login', this.loginForm).then(() => {
+        //       this.$router.push({path: '/'})
+        //       // this.loading = false
+        //     }).catch((error) => {
+        //       if (error !== 'error') {
+        //         this.$message({message: error, type: 'error', showClose: true})
+        //       }
+        //       // this.loading = false
+        //     })
+        //   } else {
+        //     console.log('error submit!!')
+        //     return false
+        //   }
+        // })
       }
     }
   }
@@ -129,8 +142,9 @@
   }
 
   .box-card {
-    margin-top: 200px;
-    /*width: 400px;*/
+    margin-top: 30%;
+    width: 100%;
+    /*horiz-align: center;*/
   }
 
   .login-title {

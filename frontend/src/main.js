@@ -9,6 +9,10 @@ import locale from 'element-ui/lib/locale/lang/en'
 import './assets/theme/index.css'
 import './assets/icon/iconfont.css'
 
+var axios = require('axios')
+axios.defaults.baseURL = 'https://localhost:8443/api'
+// 将API方法绑定到全局
+Vue.prototype.$axios = axios
 Vue.config.productionTip = false
 Vue.use(ElementUI, { locale })
 
