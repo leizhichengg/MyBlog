@@ -1,46 +1,62 @@
 <template>
   <div class="new-post-container">
+
     <div class="title-input">
       <el-input
-        type="text"
         placeholder="Input Post Title ..."
         v-model="title"
+        type="text"
         maxlength="80"
         show-word-limit
-      >
-      </el-input>
+      ></el-input>
     </div>
 
-    <div class="select-tag">
-      <el-tag
-        :key="tag"
-        v-for="tag in dynamicTags"
-        closable
-        :disable-transitions="false"
-        @close="handleClose(tag)">
-        {{tag}}
-      </el-tag>
-      <el-input
-        class="input-new-tag"
-        v-if="inputVisible"
-        v-model="inputValue"
-        ref="saveTagInput"
-        size="small"
-        @keyup.enter.native="handleInputConfirm"
-        @blur="handleInputConfirm"
-      >
-      </el-input>
-      <el-button v-else class="button-new-tag" size="small" @click="showInput">+ New Tag</el-button>
+    <span>Category: &nbsp;&nbsp;</span>
+    <el-select v-model="category" placeholder="Select category" style="width: 260px">
+      <el-option
+        v-for="item in options"
+        :key="item.value"
+        :label="item.label"
+        :value="item.value">
+      </el-option>
+    </el-select>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-    </div>
+    <span>Tags: &nbsp;&nbsp;</span>
+    <el-select
+      v-model="tags"
+      multiple
+      filterable
+      allow-create
+      default-first-option
+      placeholder="Select tags"
+      style="width: 260px">
+      <el-option
+        v-for="item in options1"
+        :key="item.value"
+        :label="item.label"
+        :value="item.value">
+      </el-option>
+    </el-select>
 
-    <div id="editor">
-      <mavon-editor
-        language="en"
-        fontSize="16px"
-        style="height: 100%">
-      </mavon-editor>
-    </div>
+    <el-row>
+      <el-col :span="24">
+        <div id="editor">
+          <mavon-editor
+            language="en"
+            fontSize="16px"
+            style="height: 100%">
+          </mavon-editor>
+        </div>
+      </el-col>
+    </el-row>
+
+    <el-row>
+      <el-button type="primary" class="a-button">
+        fabu
+      </el-button>
+    </el-row>
+
   </div>
 </template>
 
@@ -52,7 +68,17 @@
     name: 'Newpost',
     data () {
       return {
-        title: ''
+        options: [{
+          value: 'option1',
+          label: 'Test'
+        }],
+        options1: [{
+          value: 'test',
+          label: 'Test'
+        }],
+        title: '',
+        category: '',
+        tags: [],
       }
     },
     components: {
@@ -68,6 +94,15 @@
     padding-right: 10px;
   }
 
+  .title-input {
+    margin-bottom: 20px;
+    /*width: 500px;*/
+  }
+
+  span {
+    font-weight: bold;
+  }
+
   #editor {
     margin: auto;
     width: 100%;
@@ -76,25 +111,9 @@
     margin-top: 30px;
   }
 
-  .select-tag {
+  .a-button {
     margin-top: 20px;
   }
 
-  .el-tag + .el-tag {
-    margin-left: 10px;
-  }
 
-  .button-new-tag {
-    margin-left: 10px;
-    height: 32px;
-    line-height: 30px;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .input-new-tag {
-    width: 90px;
-    margin-left: 10px;
-    vertical-align: bottom;
-  }
 </style>

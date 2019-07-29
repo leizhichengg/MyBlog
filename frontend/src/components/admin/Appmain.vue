@@ -20,10 +20,11 @@
 <style scoped>
   .app-main {
     /*50 = navbar  */
-    min-height: calc(100vh);
+    /*min-height: calc(100vh);*/
     /*width: 100%;*/
     /*margin-right: -8px;*/
-    position: relative;
+    height: auto;
+    /*position: relative;*/
     overflow: hidden;
     /*background-color: #f0f0f0;*/
   }
