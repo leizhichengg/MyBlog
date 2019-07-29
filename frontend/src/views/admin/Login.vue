@@ -1,7 +1,7 @@
 <template>
   <div class="m-login">
-    <el-row :gutter="20">
-      <el-col :span="8" :offset="8" class="login-block">
+    <el-row>
+      <el-col :span="6" :offset="9" class="login-block">
         <el-card class="box-card">
 
           <el-form ref="loginFrom" :model="loginForm" :rules="loginRules" class="login-form" auto-complete="on"
@@ -21,7 +21,7 @@
                 type="text"
                 tabindex="1"
                 auto-complete="on"
-                ></el-input>
+              ></el-input>
             </el-form-item>
 
             <el-form-item prop="password">
@@ -40,7 +40,9 @@
               ></el-input>
             </el-form-item>
 
-            <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;" @click.native.prevent="handleLogin">Login</el-button>
+            <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;"
+                       @click.native.prevent="handleLogin">Login
+            </el-button>
 
             <div class="tips">
               <span style="margin-right:20px;">username: admin</span>
@@ -56,7 +58,7 @@
 </template>
 
 <script>
-  import { validUsername } from '@/utils/validate'
+  import {validUsername} from '@/utils/validate'
 
   export default {
     name: 'Login',
@@ -81,32 +83,35 @@
           password: '111111'
         },
         loginRules: {
-          username: [{ required: true, trigger: 'blur', validator: validateUsername }],
-          password: [{ required: true, trigger: 'blur', validator: validatePassword }]
+          username: [{required: true, trigger: 'blur', validator: validateUsername}],
+          password: [{required: true, trigger: 'blur', validator: validatePassword}]
         },
         loading: false,
-        passwordType: 'password',
-        redirect: undefined
+        // passwordType: 'password',
+        // redirect: undefined
       }
     },
     watch: {
       $route: {
-        handler: function(route) {
+        handler: function (route) {
           this.redirect = route.query && route.query.redirect
         },
         immediate: true
       }
     },
     methods: {
-      handleLogin() {
+      handleLogin () {
         this.$refs.loginForm.validate(valid => {
           if (valid) {
-            this.loading = true
-            this.$store.dispatch('user/login', this.loginForm).then(() => {
-              this.$router.push({ path: this.redirect || '/' })
-              this.loading = false
-            }).catch(() => {
-              this.loading = false
+            // this.loading = true
+            this.$store.dispatch('login', this.loginForm).then(() => {
+              this.$router.push({path: '/'})
+              // this.loading = false
+            }).catch((error) => {
+              if (error !== 'error') {
+                this.$message({message: error, type: 'error', showClose: true})
+              }
+              // this.loading = false
             })
           } else {
             console.log('error submit!!')
@@ -124,7 +129,7 @@
   }
 
   .box-card {
-    margin-top: 140px;
+    margin-top: 200px;
     /*width: 400px;*/
   }
 
