@@ -24,7 +24,7 @@
     /*width: 100%;*/
     /*margin-right: -8px;*/
     height: auto;
-    /*position: relative;*/
+    position: relative;
     overflow: hidden;
     /*background-color: #f0f0f0;*/
   }

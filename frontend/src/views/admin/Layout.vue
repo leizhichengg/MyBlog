@@ -38,12 +38,12 @@
   }
 
   .main-container {
-    /*min-height: 100%;*/
-    min-height: 102%;
+    min-height: 100%;
     margin: -8px -8px -8px 222px;
-    /*width: auto;*/
+    /* 100% - sidebarWidth */
+    width: calc(100% - 230px);
     /*height: 110%;*/
-    /*position: relative;*/
+    position: absolute;
     transition: margin-left .28s;
     background-color: #f5f5f5;
   }
