@@ -1,9 +1,7 @@
 package com.withlzc.backend.domain;
 
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 
 /**
@@ -15,7 +13,10 @@ import javax.validation.constraints.NotBlank;
 @Table(name = "user")
 public class User {
 
-    private static final long serivalVersionUID = 1L;
+    //    private static final long serivalVersionUID = 1L;
+    @Id
+    @GeneratedValue
+    private Long id;
 
     @NotBlank
     @Column(name = "username", unique = true, length = 10)
