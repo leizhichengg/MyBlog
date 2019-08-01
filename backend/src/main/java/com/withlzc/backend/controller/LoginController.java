@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
  * @date 2019-07-31
  */
 
-@Controller
+@RestController
 @RequestMapping("/api/admin")
 public class LoginController {
 

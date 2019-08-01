@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
  * @date 2019-07-31
  */
 
-@Service
 public interface UserService {
 
 
