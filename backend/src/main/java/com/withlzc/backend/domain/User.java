@@ -13,25 +13,14 @@ import javax.validation.constraints.NotBlank;
 @Table(name = "user")
 public class User {
 
-    //    private static final long serivalVersionUID = 1L;
     @Id
     @GeneratedValue
     private Long id;
 
-    @NotBlank
-    @Column(name = "username", unique = true, length = 10)
     private String username;
 
-    /**
-     * md5(username + original password + salt)
-     */
-    @NotBlank
-    @Column(name = "password", length = 64)
     private String password;
 
-    private String salt;
-
-    @Column(name = "email", unique = true, length = 20)
     private String email;
 
     public String getUsername() {
@@ -56,6 +45,9 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public User() {
     }
 
     @Override
