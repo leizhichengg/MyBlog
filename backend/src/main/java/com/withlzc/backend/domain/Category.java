@@ -49,6 +49,10 @@ public class Category {
         this.blogs = blogs;
     }
 
+    public Integer getBlogCount() {
+        return blogs.size();
+    }
+
     @Override
     public String toString() {
         return "Category{" +

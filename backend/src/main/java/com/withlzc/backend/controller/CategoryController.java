@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -27,6 +28,17 @@ public class CategoryController {
     @GetMapping("/list")
     public List<Category> categories() {
         return categoryService.listCategory();
+    }
+
+    /**
+     *
+     * @return the top 5 hot categories
+     */
+    @GetMapping("/hot")
+    public List<Category> hotCategories() {
+        List<Category> list = categoryService.listCategory();
+        list.sort(Comparator.comparing(Category::getBlogCount).reversed());
+        return list.subList(0, 5);
     }
 
     @PostMapping("/add")

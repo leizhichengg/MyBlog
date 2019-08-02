@@ -6,6 +6,7 @@ import com.withlzc.backend.service.TagService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -23,6 +24,17 @@ public class TagController {
     @GetMapping("/list")
     public List<Tag> tags() {
         return tagService.listTag();
+    }
+
+    /**
+     *
+     * @return the top 5 hot tags
+     */
+    @GetMapping("/hot")
+    public List<Tag> hotTags() {
+        List<Tag> list = tagService.listTag();
+        list.sort(Comparator.comparing(Tag::getBlogCount).reversed());
+        return list.subList(0, 5);
     }
 
     @PostMapping("/add")

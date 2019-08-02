@@ -1,5 +1,7 @@
 package com.withlzc.backend.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
@@ -39,9 +41,11 @@ public class Blog {
      * Many作为关系维护端
      */
     @ManyToOne
+    @JsonIgnore
     private Category category;
 
     @ManyToMany(cascade = {CascadeType.PERSIST})
+    @JsonIgnore
     private List<Tag> tags = new ArrayList<>();
 
     @OneToMany(mappedBy = "blog")
