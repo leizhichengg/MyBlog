@@ -38,7 +38,11 @@ public class CategoryController {
     public List<Category> hotCategories() {
         List<Category> list = categoryService.listCategory();
         list.sort(Comparator.comparing(Category::getBlogCount).reversed());
-        return list.subList(0, 5);
+        if (list.size() <= 5) {
+            return list;
+        } else {
+            return list.subList(0, 5);
+        }
     }
 
     @PostMapping("/add")

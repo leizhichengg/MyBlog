@@ -3,10 +3,7 @@ package com.withlzc.backend.service.impl;
 import com.withlzc.backend.dao.CategoryRepository;
 import com.withlzc.backend.domain.Category;
 import com.withlzc.backend.service.CategoryService;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -36,16 +33,23 @@ public class CategoryServiceImpl implements CategoryService {
         return categoryRepository.findById(id);
     }
 
+    /**
+     *
+     * @param id
+     * @param category
+     * @return
+     */
     @Transactional
     @Override
-    public Category updateCategory(Long id, Category category) {
+    public Optional<Category> updateCategory(Long id, Category category) {
         Optional<Category> temp = categoryRepository.findById(id);
-        if (temp.isEmpty()) {
-//            throw exception
+        if (temp.isPresent()) {
+            temp.get().setCategoryName(category.getCategoryName());
+            categoryRepository.save(temp.get());
+            return temp;
+        } else {
+            return Optional.empty();
         }
-        BeanUtils.copyProperties(category, temp);
-//??????????
-        return categoryRepository.save(category);
     }
 
     @Transactional

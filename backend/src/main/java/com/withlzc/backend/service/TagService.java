@@ -18,7 +18,7 @@ public interface TagService {
 
     Optional<Tag> getTag(Long id);
 
-    Tag updateTag(Long id, Tag tag);
+    Optional<Tag> updateTag(Long id, Tag tag);
 
     void deleteTag(Long id);
 

@@ -31,8 +31,15 @@ public class TagServiceImpl implements TagService {
     }
 
     @Override
-    public Tag updateTag(Long id, Tag tag) {
-        return null;
+    public Optional<Tag> updateTag(Long id, Tag tag) {
+        Optional<Tag> temp = tagRepository.findById(id);
+        if (temp.isPresent()) {
+            temp.get().setBlogs(tag.getBlogs());
+            temp.get().setName(tag.getName());
+            return temp;
+        } else {
+            return Optional.empty();
+        }
     }
 
     @Override

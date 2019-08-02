@@ -34,7 +34,11 @@ public class TagController {
     public List<Tag> hotTags() {
         List<Tag> list = tagService.listTag();
         list.sort(Comparator.comparing(Tag::getBlogCount).reversed());
-        return list.subList(0, 5);
+        if (list.size() <= 5) {
+            return list;
+        } else {
+            return list.subList(0, 5);
+        }
     }
 
     @PostMapping("/add")
