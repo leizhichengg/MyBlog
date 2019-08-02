@@ -25,4 +25,8 @@ public interface BlogService {
     void deleteBlog(Long id);
 
     Optional<Blog> viewBlog(Long id);
+
+    List<Blog> getBlogByCategory(Long id);
+
+    List<Blog> getBlogByTag(Long id);
 }

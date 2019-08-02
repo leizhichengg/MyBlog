@@ -1,6 +1,5 @@
 package com.withlzc.backend.controller;
 
-import com.withlzc.backend.domain.Category;
 import com.withlzc.backend.domain.Tag;
 import com.withlzc.backend.service.TagService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,7 +1,11 @@
 package com.withlzc.backend.service.impl;
 
 import com.withlzc.backend.dao.BlogRepository;
+import com.withlzc.backend.dao.CategoryRepository;
+import com.withlzc.backend.dao.TagRepository;
 import com.withlzc.backend.domain.Blog;
+import com.withlzc.backend.domain.Category;
+import com.withlzc.backend.domain.Tag;
 import com.withlzc.backend.service.BlogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,6 +23,12 @@ public class BlogServiceImpl implements BlogService {
 
     @Autowired
     private BlogRepository blogRepository;
+
+    @Autowired
+    private CategoryRepository categoryRepository;
+
+    @Autowired
+    private TagRepository tagRepository;
 
     @Override
     public Optional<Blog> getBlog(Long id) {
@@ -66,5 +76,17 @@ public class BlogServiceImpl implements BlogService {
         } else {
             return Optional.empty();
         }
+    }
+
+    @Override
+    public List<Blog> getBlogByCategory(Long id) {
+        Optional<Category> category = categoryRepository.findById(id);
+        return category.map(value -> blogRepository.findBlogByCategory(value)).orElse(null);
+    }
+
+    @Override
+    public List<Blog> getBlogByTag(Long id) {
+        Optional<Tag> tag = tagRepository.findById(id);
+        return tag.map(value -> blogRepository.findBlogByTags(value)).orElse(null);
     }
 }

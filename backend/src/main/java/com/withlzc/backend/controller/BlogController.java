@@ -53,4 +53,14 @@ public class BlogController {
     public Optional<Blog> getBlogAndAddViews(@PathVariable Long id) {
         return blogService.viewBlog(id);
     }
+
+    @GetMapping("/category/{id}")
+    public List<Blog> getBlogByCategory(@PathVariable Long id) {
+        return blogService.getBlogByCategory(id);
+    }
+
+    @GetMapping("/tag/{id}")
+    public List<Blog> getBlogByTag(@PathVariable Long id) {
+        return blogService.getBlogByTag(id);
+    }
 }
