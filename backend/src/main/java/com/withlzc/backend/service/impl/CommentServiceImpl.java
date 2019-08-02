@@ -26,7 +26,7 @@ public class CommentServiceImpl implements CommentService {
      */
     @Transactional
     @Override
-    public Comment addComment(Comment comment) {
+    public void addComment(Comment comment) {
 //        if (comment.getParentComment().isPresent()) {
 //            Long parentCommentId = comment.getParentComment().get().getId();
 //            comment.setParentComment(commentRepository.findById(parentCommentId));
@@ -35,7 +35,6 @@ public class CommentServiceImpl implements CommentService {
 //        }
 //        comment.setCreateTime(new Date());
 //        return commentRepository.save(comment);
-        return null;
     }
 
     /**

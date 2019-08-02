@@ -18,9 +18,9 @@ public interface BlogService {
 
     List<Blog> listBlog();
 
-    Blog addBlog(Blog blog);
+    void addBlog(Blog blog);
 
-    Blog updateBlog(Long id, Blog blog);
+    void updateBlog(Long id, Blog blog);
 
     void deleteBlog(Long id);
 

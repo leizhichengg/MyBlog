@@ -5,6 +5,7 @@ import com.withlzc.backend.domain.Tag;
 import com.withlzc.backend.service.TagService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -20,33 +21,36 @@ public class TagServiceImpl implements TagService {
     @Autowired
     private TagRepository tagRepository;
 
+    @Transactional
     @Override
-    public Tag addTag(Tag tag) {
-        return tagRepository.save(tag);
+    public void addTag(Tag tag) {
+        tagRepository.save(tag);
     }
 
+    @Transactional
     @Override
     public Optional<Tag> getTag(Long id) {
         return tagRepository.findById(id);
     }
 
+    @Transactional
     @Override
-    public Optional<Tag> updateTag(Long id, Tag tag) {
+    public void updateTag(Long id, Tag tag) {
         Optional<Tag> temp = tagRepository.findById(id);
         if (temp.isPresent()) {
             temp.get().setBlogs(tag.getBlogs());
             temp.get().setName(tag.getName());
-            return temp;
         } else {
-            return Optional.empty();
         }
     }
 
+    @Transactional
     @Override
     public void deleteTag(Long id) {
         tagRepository.deleteById(id);
     }
 
+    @Transactional
     @Override
     public List<Tag> listTag() {
         return tagRepository.findAll();

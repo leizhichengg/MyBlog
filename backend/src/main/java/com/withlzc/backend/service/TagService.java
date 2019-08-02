@@ -14,11 +14,11 @@ import java.util.Optional;
 @Service
 public interface TagService {
 
-    Tag addTag(Tag tag);
+    void addTag(Tag tag);
 
     Optional<Tag> getTag(Long id);
 
-    Optional<Tag> updateTag(Long id, Tag tag);
+    void updateTag(Long id, Tag tag);
 
     void deleteTag(Long id);
 

@@ -13,7 +13,7 @@ import java.util.List;
 @Service
 public interface CommentService {
 
-    Comment addComment(Comment comment);
+    void addComment(Comment comment);
 
     List<Comment> listCommentByBlogId(Long id);
 

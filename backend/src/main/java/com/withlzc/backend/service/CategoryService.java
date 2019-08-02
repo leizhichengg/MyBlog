@@ -14,11 +14,11 @@ import java.util.Optional;
 @Service
 public interface CategoryService {
 
-    Category addCategory(Category category);
-
     Optional<Category> getCategory(Long id);
 
-    Optional<Category> updateCategory(Long id, Category category);
+    void addCategory(Category category);
+
+    void updateCategory(Long id, Category category);
 
     void deleteCategory(Long id);
 

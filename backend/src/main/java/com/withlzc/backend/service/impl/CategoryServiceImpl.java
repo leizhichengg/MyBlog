@@ -1,6 +1,7 @@
 package com.withlzc.backend.service.impl;
 
 import com.withlzc.backend.dao.CategoryRepository;
+import com.withlzc.backend.domain.Blog;
 import com.withlzc.backend.domain.Category;
 import com.withlzc.backend.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,8 +24,8 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Transactional
     @Override
-    public Category addCategory(Category category) {
-        return categoryRepository.save(category);
+    public void addCategory(Category category) {
+        categoryRepository.save(category);
     }
 
     @Transactional
@@ -41,14 +42,12 @@ public class CategoryServiceImpl implements CategoryService {
      */
     @Transactional
     @Override
-    public Optional<Category> updateCategory(Long id, Category category) {
+    public void updateCategory(Long id, Category category) {
         Optional<Category> temp = categoryRepository.findById(id);
         if (temp.isPresent()) {
             temp.get().setCategoryName(category.getCategoryName());
             categoryRepository.save(temp.get());
-            return temp;
         } else {
-            return Optional.empty();
         }
     }
 

@@ -63,4 +63,22 @@ public class BlogController {
     public List<Blog> getBlogByTag(@PathVariable Long id) {
         return blogService.getBlogByTag(id);
     }
+
+    @RequestMapping("/add")
+    public void addBlog(Blog blog) {
+        if (blog.getId() != null) {
+        } else {
+            blogService.addBlog(blog);
+        }
+    }
+
+    @RequestMapping("/update/{id}")
+    public void updateBlog(@PathVariable Long id, Blog blog) {
+        blogService.updateBlog(id, blog);
+    }
+
+    @RequestMapping("/delete/{id}")
+    public void deleteBlog(@PathVariable Long id) {
+        blogService.deleteBlog(id);
+    }
 }
