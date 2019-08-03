@@ -9,9 +9,9 @@
       <el-col :span="14" :offset="5">
         <!--          <el-button round size="small" class="m-side-tag-button">All <sup> 2</sup></el-button>-->
         <el-row class="m-tag">
-            <el-button round size="small" class="m-side-tag-button" v-for="t in tagList">{{t.name}} <sup> 2</sup></el-button>
+            <el-button round size="small" class="m-side-tag-button" v-for="t in tagList" :key="t.id">{{t.name}} <sup> 2</sup></el-button>
         </el-row>
-        <div class="tag-block" v-for="t in tagList">
+        <div class="tag-block" v-for="t in tagList" :key="t.id">
           <h3 class="m-tag-title">
             <i class="el-icon-ali-tag"></i>
             &nbsp;{{t.name}}
@@ -104,6 +104,11 @@
     margin-top: 36px;
     text-align: left;
     margin-bottom: 36px;
+  }
+
+  .m-side-tag-button {
+    font-size: 14px;
+    font-weight: bold;
   }
 
   .m-tag-title {

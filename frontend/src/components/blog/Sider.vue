@@ -4,13 +4,9 @@
       <!--hot tags-->
       <div class="tag-side">
         <el-link href="#" class="side-title">Tags</el-link>
-        <br><br>
-        <el-tag v-for="tag in hotTags" :key="tag.name">{{tag.name}}</el-tag>
-<!--        <el-button round size="small" class="m-side-tag-button">java</el-button>-->
-<!--        <el-button round size="small" class="m-side-tag-button">python</el-button>-->
-<!--        <el-button round size="small" class="m-side-tag-button">test</el-button>-->
-<!--        <el-button round size="small" class="m-side-tag-button">item</el-button>-->
-<!--        <el-button round size="small" class="m-side-tag-button">hahaha</el-button>-->
+        <el-row class="m-tag">
+          <el-button round size="small" class="m-side-tag-button" v-for="t in hotTags" :key="t.id">{{t.name}}</el-button>
+        </el-row>
       </div>
       <hr>
       <!--hot category-->
@@ -50,13 +46,13 @@
       }
     },
     methods: {
-      getHotTag () {
-        let that = this
-        getHotTags().then(data => {
-          that.hotTags = data.data()
+      getHotTags () {
+        getHotTags().then(response => {
+          this.hotTags = response.data
+          console.info(response)
         }).catch(error => {
           if (error !== 'error') {
-            that.$message({type: 'error', message: 'hot tags fail!', showClose: true})
+            this.$message({type: 'error', message: 'hot tags fail!', showClose: true})
           }
         })
       }
@@ -86,6 +82,7 @@
     color: #cccccc;
     font-size: 22px;
     font-weight: bolder;
+    margin-bottom: 20px;
   }
 
   .m-side-tag-button {

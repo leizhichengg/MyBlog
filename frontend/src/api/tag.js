@@ -17,3 +17,27 @@ export function getHotTags () {
     method: 'get'
   })
 }
+
+export function addTag (tag) {
+  return HttpRequest({
+    url: '/tag/add',
+    method: 'post',
+    data: tag
+  })
+}
+
+export function updateTag (tag) {
+  return HttpRequest({
+    url: '/tag/update',
+    method: 'put',
+    data: tag
+  })
+}
+
+export function deleteTag (tag) {
+  return HttpRequest({
+    url: '/tag/delete',
+    method: 'delete',
+    data: tag
+  })
+}

@@ -50,7 +50,7 @@ export function addBlog (blog) {
   return HttpRequest({
     url: '/blog/add',
     method: 'post',
-    date: blog
+    data: blog
   })
 }
 
@@ -58,7 +58,7 @@ export function updateBlog (blog) {
   return HttpRequest({
     url: '/blog/update',
     method: 'put',
-    date: blog
+    data: blog
   })
 }
 
@@ -66,6 +66,6 @@ export function deleteBlog (blog) {
   return HttpRequest({
     url: '/blog/delete',
     method: 'delete',
-    date: blog
+    data: blog
   })
 }
