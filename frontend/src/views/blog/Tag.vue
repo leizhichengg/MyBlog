@@ -5,27 +5,25 @@
       <h1 class="m-title">Tag</h1>
     </header>
     <!--Main content-->
-    <el-row :gutter="20">
+    <el-row class="tag-container">
       <el-col :span="14" :offset="5">
-        <div class="m-tag">
-          <el-button round size="small" class="m-side-tag-button">All <sup> 2</sup></el-button>
-          <el-button round size="small" class="m-side-tag-button">前端 <sup> 2</sup></el-button>
-          <el-button round size="small" class="m-side-tag-button">后端 <sup> 2</sup></el-button>
-        </div>
-        <div class="tag-block">
-          <div class="m-tag-title">
-            前端
-          </div>
+        <!--          <el-button round size="small" class="m-side-tag-button">All <sup> 2</sup></el-button>-->
+        <el-row class="m-tag">
+            <el-button round size="small" class="m-side-tag-button" v-for="t in tagList">{{t.name}} <sup> 2</sup></el-button>
+        </el-row>
+        <div class="tag-block" v-for="t in tagList">
+          <h3 class="m-tag-title">
+            <i class="el-icon-ali-tag"></i>
+            &nbsp;{{t.name}}
+          </h3>
           <!--post list-->
           <div class="m-post-list">
             <div class="m-post">
-              <h3>Post title</h3>
-              <h4>2019-2-9</h4>
+              <h2>Post title</h2>
               <hr>
             </div>
             <div class="m-post">
-              <h3>Post title</h3>
-              <h4>2019-2-9</h4>
+              <h2>Post title</h2>
               <hr>
             </div>
           </div>
@@ -40,19 +38,35 @@
   import Navbar from '@/components/blog/navbar/HomeNavBar'
   import Footer from '@/components/blog/Footer'
   import Header from '@/components/blog/Header'
+  import {getTagList} from '../../api/tag'
 
   export default {
     name: 'Tag',
+    created () {
+      this.getTagList()
+    },
     data () {
       return {
-        activeIndex: '/tag'
+        tagList: [],
+      }
+    },
+
+    methods: {
+      getTagList () {
+        getTagList().then(response => {
+          this.tagList = response.data
+          console.info(response)
+        }).catch(error => {
+          if (error !== 'error') {
+            this.$message({type: 'error', message: 'get tag list fail!', showClose: true})
+          }
+        })
       }
     },
     components: {
       Header,
       'b-nav': Navbar,
       'b-footer': Footer,
-
     }
   }
 </script>
@@ -72,24 +86,40 @@
     color: white;
   }
 
+  .tag-container {
+    width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   .m-title {
     font-size: 45px;
     padding-top: 150px;
     text-align: center;
   }
+
   .m-tag {
     margin-top: 36px;
     text-align: left;
+    margin-bottom: 36px;
   }
 
   .m-tag-title {
     margin-top: 24px;
+    margin-bottom: 40px;
     text-align: left;
+    font-size: 20px;
+    color: #2A3F54;
   }
+
   .m-post-list {
     text-align: left;
     padding-left: 12px;
+    font-size: 20px;
   }
+
   hr {
     margin-top: 20px;
     margin-bottom: 20px;

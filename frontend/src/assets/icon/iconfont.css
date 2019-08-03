@@ -32,7 +32,8 @@
 
 .el-icon-ali-tag:before {
   content: "\e617";
-  color: #E1E1E1;
+  font-size: 22px;
+  /*color: #E1E1E1;*/
 }
 
 .el-icon-ali-post:before {

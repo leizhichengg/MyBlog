@@ -5,11 +5,12 @@
       <div class="tag-side">
         <el-link href="#" class="side-title">Tags</el-link>
         <br><br>
-        <el-button round size="small" class="m-side-tag-button">java</el-button>
-        <el-button round size="small" class="m-side-tag-button">python</el-button>
-        <el-button round size="small" class="m-side-tag-button">test</el-button>
-        <el-button round size="small" class="m-side-tag-button">item</el-button>
-        <el-button round size="small" class="m-side-tag-button">hahaha</el-button>
+        <el-tag v-for="tag in hotTags" :key="tag.name">{{tag.name}}</el-tag>
+<!--        <el-button round size="small" class="m-side-tag-button">java</el-button>-->
+<!--        <el-button round size="small" class="m-side-tag-button">python</el-button>-->
+<!--        <el-button round size="small" class="m-side-tag-button">test</el-button>-->
+<!--        <el-button round size="small" class="m-side-tag-button">item</el-button>-->
+<!--        <el-button round size="small" class="m-side-tag-button">hahaha</el-button>-->
       </div>
       <hr>
       <!--hot category-->
@@ -36,9 +37,32 @@
 </template>
 
 <script>
+  import {getHotTags} from '../../api/tag'
+
   export default {
-    name: 'Sider'
+    name: 'Sider',
+    created () {
+      this.getHotTags()
+    },
+    data () {
+      return {
+        hotTags: [],
+      }
+    },
+    methods: {
+      getHotTag () {
+        let that = this
+        getHotTags().then(data => {
+          that.hotTags = data.data()
+        }).catch(error => {
+          if (error !== 'error') {
+            that.$message({type: 'error', message: 'hot tags fail!', showClose: true})
+          }
+        })
+      }
+    }
   }
+
 </script>
 
 <style scoped>

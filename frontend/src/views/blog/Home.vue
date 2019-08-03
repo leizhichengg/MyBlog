@@ -8,7 +8,7 @@
       <el-row :gutter="20">
         <el-col :span="16">
           <b-content></b-content>
-          <b-page/>
+<!--          <b-page/>-->
         </el-col>
         <el-col :span="8">
           <b-sider></b-sider>
@@ -47,7 +47,7 @@
 
 <style scoped>
   .m-container {
-    width: 1170px;
+    width: 1200px;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;

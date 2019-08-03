@@ -3,10 +3,7 @@ package com.withlzc.backend.controller;
 import com.withlzc.backend.domain.Blog;
 import com.withlzc.backend.service.BlogService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Comparator;
 import java.util.List;
@@ -64,7 +61,7 @@ public class BlogController {
         return blogService.getBlogByTag(id);
     }
 
-    @RequestMapping("/add")
+    @PostMapping("/add")
     public void addBlog(Blog blog) {
         if (blog.getId() != null) {
         } else {
@@ -72,12 +69,12 @@ public class BlogController {
         }
     }
 
-    @RequestMapping("/update/{id}")
+    @PutMapping("/update/{id}")
     public void updateBlog(@PathVariable Long id, Blog blog) {
         blogService.updateBlog(id, blog);
     }
 
-    @RequestMapping("/delete/{id}")
+    @DeleteMapping("/delete/{id}")
     public void deleteBlog(@PathVariable Long id) {
         blogService.deleteBlog(id);
     }
