@@ -1,14 +1,9 @@
 <template>
   <div class="m-footer">
     <el-divider></el-divider>
-    <a class="m-icon" target="_blank" href="#">
-      <i class="el-icon-ali-github-fill"></i>
-    </a>
-    &nbsp;&nbsp;
-    <a class="m-icon" target="_blank" href="#">
-      <i class="el-icon-ali-linkedin-fill"></i>
-    </a>
-    <br>
+<!--    <el-button icon="el-icon-ali-github-fill" size="small" circle class="social-icons"></el-button>-->
+<!--    <el-button icon="el-icon-ali-linkedin-fill" size="small" circle class="social-icons"></el-button>-->
+<!--    <br>-->
     <p>Copyright © lzc Blog 2019</p>
     <p>Designed by lzc</p>
   </div>
@@ -26,6 +21,7 @@
 <style scoped>
   .m-footer {
     font-size: 16px;
+    margin-top: 50px;
   }
 
   .m-icon {

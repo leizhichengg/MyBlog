@@ -68,10 +68,12 @@
 
 .el-icon-ali-github-fill:before {
   content: "\e885";
+  font-size: 24px;
 }
 
 .el-icon-ali-linkedin-fill:before {
   content: "\e890";
+  font-size: 24px;
 }
 
 .el-icon-ali-menu-unfold1:before {

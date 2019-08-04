@@ -17,6 +17,19 @@
         </el-row>
       </div>
       <hr>
+      <!--social icon-->
+      <div class="about-me-side">
+        <div class="side-title">Social Icons</div>
+        <el-row>
+          <el-button icon="el-icon-ali-github-fill" size="small" circle class="social-icons"></el-button>
+          <el-button icon="el-icon-ali-linkedin-fill" size="small" circle class="social-icons"></el-button>
+          <el-button icon="el-icon-ali-github-fill" size="small" circle class="social-icons"></el-button>
+          <el-button icon="el-icon-ali-github-fill" size="small" circle class="social-icons"></el-button>
+          <el-button icon="el-icon-ali-github-fill" size="small" circle class="social-icons"></el-button>
+        </el-row>
+
+      </div>
+      <hr>
       <!--about me-->
       <div class="about-me-side">
         <div class="side-title">About me</div>
@@ -71,13 +84,15 @@
 
 <style scoped>
   .m-side {
-    padding-right: 150px;
+    /*padding-right: 150px;*/
+    float: right;
+    /*width: 30%;*/
   }
 
   .sidebar {
     background: transparent;
-    margin-left: 20px;
-    margin-top: 30px;
+    /*margin-left: 20px;*/
+    /*margin-top: 30px;*/
     text-align: left;
     color: #cccccc;
   }
@@ -95,6 +110,11 @@
 
   .m-side-button {
     margin-bottom: 10px;
+  }
+
+  .social-icons {
+    margin-bottom: 10px;
+    margin-right: 5px;
   }
 
   hr {

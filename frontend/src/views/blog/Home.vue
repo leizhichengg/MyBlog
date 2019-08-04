@@ -5,7 +5,7 @@
     <br>
     <br>
     <div class="m-container">
-      <el-row :gutter="20">
+      <el-row :gutter="40">
         <el-col :span="16">
           <b-content></b-content>
 <!--          <b-page/>-->
@@ -47,10 +47,13 @@
 
 <style scoped>
   .m-container {
-    width: 1200px;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+    max-width: 1000px;
+    clear: both;
+    margin: 0 auto;
+    padding: 60px 30px 0;
+    /*padding-right: 15px;*/
+    /*padding-left: 15px;*/
+    /*margin-right: auto;*/
+    /*margin-left: auto;*/
   }
 </style>
