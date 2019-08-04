@@ -1,160 +1,118 @@
-2019-08-03 14:40:40.162  INFO 85421 --- [main] com.withlzc.backend.BackendApplication   : Starting BackendApplication on ZhichengdeMacBook-Pro.local with PID 85421 (/Users/lzc/MyBlog/backend/target/classes started by lzc in /Users/lzc/MyBlog/backend)
-2019-08-03 14:40:40.170  INFO 85421 --- [main] com.withlzc.backend.BackendApplication   : No active profile set, falling back to default profiles: default
-2019-08-03 14:40:40.896  INFO 85421 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-08-03 14:40:40.897  INFO 85421 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-08-03 14:40:40.964  INFO 85421 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58ms. Found 5 repository interfaces.
-2019-08-03 14:40:40.976  INFO 85421 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-08-03 14:40:40.978  INFO 85421 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-08-03 14:40:40.989  INFO 85421 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.BlogRepository.
-2019-08-03 14:40:40.990  INFO 85421 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.CategoryRepository.
-2019-08-03 14:40:40.990  INFO 85421 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.CommentRepository.
-2019-08-03 14:40:40.991  INFO 85421 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.TagRepository.
-2019-08-03 14:40:40.991  INFO 85421 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.UserRepository.
-2019-08-03 14:40:40.991  INFO 85421 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5ms. Found 0 repository interfaces.
-2019-08-03 14:40:41.076  WARN 85421 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.withlzc.backend]' package. Please check your configuration.
-2019-08-03 14:40:41.293  INFO 85421 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$438ca1da] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-03 14:40:41.503  INFO 85421 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-08-03 14:40:41.526  INFO 85421 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-08-03 14:40:41.527  INFO 85421 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-08-03 14:40:41.627  INFO 85421 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-08-03 14:40:41.628  INFO 85421 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1419 ms
-2019-08-03 14:40:41.749  INFO 85421 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-08-03 14:40:42.080  INFO 85421 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-08-03 14:40:42.124  INFO 85421 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2019-08-04 14:36:04.601  INFO 9336 --- [main] com.withlzc.backend.BackendApplication   : Starting BackendApplication on ZhichengdeMacBook-Pro.local with PID 9336 (/Users/lzc/MyBlog/backend/target/classes started by lzc in /Users/lzc/MyBlog/backend)
+2019-08-04 14:36:04.607  INFO 9336 --- [main] com.withlzc.backend.BackendApplication   : No active profile set, falling back to default profiles: default
+2019-08-04 14:36:05.376  INFO 9336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-04 14:36:05.376  INFO 9336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-04 14:36:05.446  INFO 9336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60ms. Found 5 repository interfaces.
+2019-08-04 14:36:05.458  INFO 9336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-04 14:36:05.459  INFO 9336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-04 14:36:05.470  INFO 9336 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.BlogRepository.
+2019-08-04 14:36:05.471  INFO 9336 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.CategoryRepository.
+2019-08-04 14:36:05.471  INFO 9336 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.CommentRepository.
+2019-08-04 14:36:05.472  INFO 9336 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.TagRepository.
+2019-08-04 14:36:05.472  INFO 9336 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.UserRepository.
+2019-08-04 14:36:05.472  INFO 9336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5ms. Found 0 repository interfaces.
+2019-08-04 14:36:05.557  WARN 9336 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.withlzc.backend]' package. Please check your configuration.
+2019-08-04 14:36:05.791  INFO 9336 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d63d485c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-04 14:36:06.032  INFO 9336 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-08-04 14:36:06.057  INFO 9336 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-04 14:36:06.057  INFO 9336 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-04 14:36:06.171  INFO 9336 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-04 14:36:06.171  INFO 9336 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1520 ms
+2019-08-04 14:36:06.312  INFO 9336 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-08-04 14:36:06.735  INFO 9336 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-08-04 14:36:06.784  INFO 9336 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-08-03 14:40:42.171  INFO 85421 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
-2019-08-03 14:40:42.172  INFO 85421 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2019-08-03 14:40:42.284  INFO 85421 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2019-08-03 14:40:42.406  INFO 85421 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2019-08-03 14:40:43.066  INFO 85421 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-08-03 14:40:43.579  INFO 85421 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-08-03 14:40:43.614  WARN 85421 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-08-03 14:40:44.034  INFO 85421 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2019-08-03 14:40:44.037  INFO 85421 --- [main] com.withlzc.backend.BackendApplication   : Started BackendApplication in 4.253 seconds (JVM running for 4.938)
-2019-08-03 14:40:47.217  INFO 85421 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-08-03 14:40:47.217  INFO 85421 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-08-03 14:40:47.225  INFO 85421 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
-2019-08-03 14:41:18.262  INFO 85421 --- [http-nio-8080-exec-4] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2019-08-03 14:45:26.966  INFO 85421 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-08-03 14:45:26.967  INFO 85421 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-08-03 14:45:26.970  INFO 85421 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2019-08-03 14:45:26.982  INFO 85421 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2019-08-03 14:45:59.452  INFO 86348 --- [main] com.withlzc.backend.BackendApplication   : Starting BackendApplication on ZhichengdeMacBook-Pro.local with PID 86348 (/Users/lzc/MyBlog/backend/target/classes started by lzc in /Users/lzc/MyBlog/backend)
-2019-08-03 14:45:59.454  INFO 86348 --- [main] com.withlzc.backend.BackendApplication   : No active profile set, falling back to default profiles: default
-2019-08-03 14:46:00.119  INFO 86348 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-08-03 14:46:00.119  INFO 86348 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-08-03 14:46:00.188  INFO 86348 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58ms. Found 5 repository interfaces.
-2019-08-03 14:46:00.203  INFO 86348 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-08-03 14:46:00.205  INFO 86348 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-08-03 14:46:00.219  INFO 86348 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.BlogRepository.
-2019-08-03 14:46:00.219  INFO 86348 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.CategoryRepository.
-2019-08-03 14:46:00.220  INFO 86348 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.CommentRepository.
-2019-08-03 14:46:00.220  INFO 86348 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.TagRepository.
-2019-08-03 14:46:00.221  INFO 86348 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.UserRepository.
-2019-08-03 14:46:00.221  INFO 86348 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 repository interfaces.
-2019-08-03 14:46:00.314  WARN 86348 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.withlzc.backend]' package. Please check your configuration.
-2019-08-03 14:46:00.517  INFO 86348 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$29c594ea] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-03 14:46:00.737  INFO 86348 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-08-03 14:46:00.759  INFO 86348 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-08-03 14:46:00.759  INFO 86348 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-08-03 14:46:00.855  INFO 86348 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-08-03 14:46:00.855  INFO 86348 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1365 ms
-2019-08-03 14:46:00.997  INFO 86348 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-08-03 14:46:01.293  INFO 86348 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-08-03 14:46:01.336  INFO 86348 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2019-08-04 14:36:06.844  INFO 9336 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-08-04 14:36:06.846  INFO 9336 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-08-04 14:36:06.955  INFO 9336 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-08-04 14:36:07.066  INFO 9336 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-08-04 14:36:07.858  INFO 9336 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-04 14:36:08.413  INFO 9336 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-04 14:36:08.444  WARN 9336 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-04 14:36:08.882  INFO 9336 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-08-04 14:36:08.885  INFO 9336 --- [main] com.withlzc.backend.BackendApplication   : Started BackendApplication in 4.648 seconds (JVM running for 5.358)
+2019-08-04 14:36:12.992  INFO 9336 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-04 14:36:12.993  INFO 9336 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-04 14:36:13.000  INFO 9336 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-08-04 14:36:13.058  INFO 9336 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-08-04 14:51:30.830  INFO 9336 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-04 14:51:30.836  INFO 9336 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-04 14:51:30.840  INFO 9336 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-08-04 14:51:30.853  INFO 9336 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-08-04 14:51:36.934  INFO 11823 --- [main] com.withlzc.backend.BackendApplication   : Starting BackendApplication on ZhichengdeMacBook-Pro.local with PID 11823 (/Users/lzc/MyBlog/backend/target/classes started by lzc in /Users/lzc/MyBlog/backend)
+2019-08-04 14:51:36.936  INFO 11823 --- [main] com.withlzc.backend.BackendApplication   : No active profile set, falling back to default profiles: default
+2019-08-04 14:51:37.552  INFO 11823 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-04 14:51:37.552  INFO 11823 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-04 14:51:37.615  INFO 11823 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51ms. Found 5 repository interfaces.
+2019-08-04 14:51:37.628  INFO 11823 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-04 14:51:37.629  INFO 11823 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-04 14:51:37.641  INFO 11823 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.BlogRepository.
+2019-08-04 14:51:37.642  INFO 11823 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.CategoryRepository.
+2019-08-04 14:51:37.642  INFO 11823 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.CommentRepository.
+2019-08-04 14:51:37.643  INFO 11823 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.TagRepository.
+2019-08-04 14:51:37.643  INFO 11823 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.UserRepository.
+2019-08-04 14:51:37.644  INFO 11823 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 repository interfaces.
+2019-08-04 14:51:37.749  WARN 11823 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.withlzc.backend]' package. Please check your configuration.
+2019-08-04 14:51:37.962  INFO 11823 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d1444157] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-04 14:51:38.177  INFO 11823 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-08-04 14:51:38.200  INFO 11823 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-04 14:51:38.201  INFO 11823 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-04 14:51:38.301  INFO 11823 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-04 14:51:38.302  INFO 11823 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1331 ms
+2019-08-04 14:51:38.429  INFO 11823 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-08-04 14:51:38.683  INFO 11823 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-08-04 14:51:38.732  INFO 11823 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-08-03 14:46:01.384  INFO 86348 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
-2019-08-03 14:46:01.385  INFO 86348 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2019-08-03 14:46:01.486  INFO 86348 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2019-08-03 14:46:01.574  INFO 86348 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2019-08-03 14:46:02.509  INFO 86348 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-08-03 14:46:03.039  INFO 86348 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-08-03 14:46:03.068  WARN 86348 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-08-03 14:46:03.500  INFO 86348 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2019-08-03 14:46:03.503  INFO 86348 --- [main] com.withlzc.backend.BackendApplication   : Started BackendApplication in 4.417 seconds (JVM running for 5.11)
-2019-08-03 15:10:56.445  INFO 86348 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-08-03 15:10:56.447  INFO 86348 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-08-03 15:10:56.450  INFO 86348 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2019-08-03 15:10:56.460  INFO 86348 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2019-08-03 15:11:00.930  INFO 90316 --- [main] com.withlzc.backend.BackendApplication   : Starting BackendApplication on ZhichengdeMacBook-Pro.local with PID 90316 (/Users/lzc/MyBlog/backend/target/classes started by lzc in /Users/lzc/MyBlog/backend)
-2019-08-03 15:11:00.932  INFO 90316 --- [main] com.withlzc.backend.BackendApplication   : No active profile set, falling back to default profiles: default
-2019-08-03 15:11:01.554  INFO 90316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-08-03 15:11:01.555  INFO 90316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-08-03 15:11:01.649  INFO 90316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83ms. Found 5 repository interfaces.
-2019-08-03 15:11:01.667  INFO 90316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-08-03 15:11:01.669  INFO 90316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-08-03 15:11:01.678  INFO 90316 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.BlogRepository.
-2019-08-03 15:11:01.679  INFO 90316 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.CategoryRepository.
-2019-08-03 15:11:01.681  INFO 90316 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.CommentRepository.
-2019-08-03 15:11:01.682  INFO 90316 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.TagRepository.
-2019-08-03 15:11:01.683  INFO 90316 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.UserRepository.
-2019-08-03 15:11:01.684  INFO 90316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 0 repository interfaces.
-2019-08-03 15:11:01.786  WARN 90316 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.withlzc.backend]' package. Please check your configuration.
-2019-08-03 15:11:02.002  INFO 90316 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a4fe361c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-03 15:11:02.246  INFO 90316 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-08-03 15:11:02.270  INFO 90316 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-08-03 15:11:02.271  INFO 90316 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-08-03 15:11:02.378  INFO 90316 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-08-03 15:11:02.378  INFO 90316 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1413 ms
-2019-08-03 15:11:02.513  INFO 90316 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-08-03 15:11:02.771  INFO 90316 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-08-03 15:11:02.814  INFO 90316 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2019-08-04 14:51:38.784  INFO 11823 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-08-04 14:51:38.785  INFO 11823 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-08-04 14:51:38.886  INFO 11823 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-08-04 14:51:38.988  INFO 11823 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-08-04 14:51:39.587  INFO 11823 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-04 14:51:40.096  INFO 11823 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-04 14:51:40.123  WARN 11823 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-04 14:51:40.549  INFO 11823 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-08-04 14:51:40.552  INFO 11823 --- [main] com.withlzc.backend.BackendApplication   : Started BackendApplication in 3.916 seconds (JVM running for 4.613)
+2019-08-04 14:54:33.232  INFO 11823 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-04 14:54:33.235  INFO 11823 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-04 14:54:33.238  INFO 11823 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-08-04 14:54:33.247  INFO 11823 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-08-04 14:54:36.916  INFO 12368 --- [main] com.withlzc.backend.BackendApplication   : Starting BackendApplication on ZhichengdeMacBook-Pro.local with PID 12368 (/Users/lzc/MyBlog/backend/target/classes started by lzc in /Users/lzc/MyBlog/backend)
+2019-08-04 14:54:36.918  INFO 12368 --- [main] com.withlzc.backend.BackendApplication   : No active profile set, falling back to default profiles: default
+2019-08-04 14:54:37.529  INFO 12368 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-04 14:54:37.529  INFO 12368 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-04 14:54:37.601  INFO 12368 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62ms. Found 5 repository interfaces.
+2019-08-04 14:54:37.614  INFO 12368 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-04 14:54:37.616  INFO 12368 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-04 14:54:37.626  INFO 12368 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.BlogRepository.
+2019-08-04 14:54:37.626  INFO 12368 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.CategoryRepository.
+2019-08-04 14:54:37.627  INFO 12368 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.CommentRepository.
+2019-08-04 14:54:37.627  INFO 12368 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.TagRepository.
+2019-08-04 14:54:37.628  INFO 12368 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.UserRepository.
+2019-08-04 14:54:37.628  INFO 12368 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 repository interfaces.
+2019-08-04 14:54:37.714  WARN 12368 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.withlzc.backend]' package. Please check your configuration.
+2019-08-04 14:54:37.928  INFO 12368 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$acdcfdd6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-04 14:54:38.130  INFO 12368 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-08-04 14:54:38.154  INFO 12368 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-04 14:54:38.154  INFO 12368 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-04 14:54:38.249  INFO 12368 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-04 14:54:38.250  INFO 12368 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1300 ms
+2019-08-04 14:54:38.372  INFO 12368 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-08-04 14:54:38.611  INFO 12368 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-08-04 14:54:38.647  INFO 12368 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-08-03 15:11:02.867  INFO 90316 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
-2019-08-03 15:11:02.868  INFO 90316 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2019-08-03 15:11:02.969  INFO 90316 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2019-08-03 15:11:03.054  INFO 90316 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2019-08-03 15:11:03.706  INFO 90316 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-08-03 15:11:04.264  INFO 90316 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-08-03 15:11:04.303  WARN 90316 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-08-03 15:11:04.763  INFO 90316 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2019-08-03 15:11:04.767  INFO 90316 --- [main] com.withlzc.backend.BackendApplication   : Started BackendApplication in 4.153 seconds (JVM running for 4.843)
-2019-08-03 15:44:25.303  INFO 90316 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-08-03 15:44:25.305  INFO 90316 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-08-03 15:44:25.318  INFO 90316 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
-2019-08-03 15:44:25.390  INFO 90316 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2019-08-03 16:04:51.773  INFO 90316 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-08-03 16:04:51.774  INFO 90316 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-08-03 16:04:51.777  INFO 90316 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2019-08-03 16:04:51.785  INFO 90316 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2019-08-03 16:04:55.471  INFO 98907 --- [main] com.withlzc.backend.BackendApplication   : Starting BackendApplication on ZhichengdeMacBook-Pro.local with PID 98907 (/Users/lzc/MyBlog/backend/target/classes started by lzc in /Users/lzc/MyBlog/backend)
-2019-08-03 16:04:55.473  INFO 98907 --- [main] com.withlzc.backend.BackendApplication   : No active profile set, falling back to default profiles: default
-2019-08-03 16:04:56.101  INFO 98907 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-08-03 16:04:56.101  INFO 98907 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-08-03 16:04:56.163  INFO 98907 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54ms. Found 5 repository interfaces.
-2019-08-03 16:04:56.176  INFO 98907 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-08-03 16:04:56.177  INFO 98907 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-08-03 16:04:56.187  INFO 98907 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.BlogRepository.
-2019-08-03 16:04:56.188  INFO 98907 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.CategoryRepository.
-2019-08-03 16:04:56.188  INFO 98907 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.CommentRepository.
-2019-08-03 16:04:56.189  INFO 98907 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.TagRepository.
-2019-08-03 16:04:56.189  INFO 98907 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.withlzc.backend.dao.UserRepository.
-2019-08-03 16:04:56.189  INFO 98907 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 repository interfaces.
-2019-08-03 16:04:56.275  WARN 98907 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.withlzc.backend]' package. Please check your configuration.
-2019-08-03 16:04:56.495  INFO 98907 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9b43d220] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-03 16:04:56.705  INFO 98907 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-08-03 16:04:56.727  INFO 98907 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-08-03 16:04:56.728  INFO 98907 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-08-03 16:04:56.816  INFO 98907 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-08-03 16:04:56.817  INFO 98907 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1310 ms
-2019-08-03 16:04:56.942  INFO 98907 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-08-03 16:04:57.222  INFO 98907 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-08-03 16:04:57.270  INFO 98907 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2019-08-03 16:04:57.331  INFO 98907 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
-2019-08-03 16:04:57.332  INFO 98907 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2019-08-03 16:04:57.451  INFO 98907 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2019-08-03 16:04:57.571  INFO 98907 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2019-08-03 16:04:58.222  INFO 98907 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-08-03 16:04:58.705  INFO 98907 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-08-03 16:04:58.737  WARN 98907 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-08-03 16:04:59.162  INFO 98907 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2019-08-03 16:04:59.165  INFO 98907 --- [main] com.withlzc.backend.BackendApplication   : Started BackendApplication in 4.008 seconds (JVM running for 4.689)
-2019-08-03 16:05:05.425  INFO 98907 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-08-03 16:05:05.426  INFO 98907 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-08-03 16:05:05.435  INFO 98907 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
-2019-08-03 16:05:05.487  INFO 98907 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-08-04 14:54:38.690  INFO 12368 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-08-04 14:54:38.691  INFO 12368 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-08-04 14:54:38.793  INFO 12368 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-08-04 14:54:38.879  INFO 12368 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-08-04 14:54:39.466  INFO 12368 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-04 14:54:39.962  INFO 12368 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-04 14:54:39.991  WARN 12368 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-04 14:54:40.427  INFO 12368 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-08-04 14:54:40.430  INFO 12368 --- [main] com.withlzc.backend.BackendApplication   : Started BackendApplication in 3.799 seconds (JVM running for 4.377)
+2019-08-04 14:55:58.589  INFO 12368 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-04 14:55:58.590  INFO 12368 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-04 14:55:58.597  INFO 12368 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-08-04 14:55:58.662  INFO 12368 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory

@@ -39,7 +39,7 @@ public class TagServiceImpl implements TagService {
         Optional<Tag> temp = tagRepository.findById(id);
         if (temp.isPresent()) {
             temp.get().setBlogs(tag.getBlogs());
-            temp.get().setName(tag.getName());
+            temp.get().setTagName(tag.getTagName());
         } else {
         }
     }

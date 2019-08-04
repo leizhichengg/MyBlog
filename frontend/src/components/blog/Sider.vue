@@ -5,21 +5,16 @@
       <div class="tag-side">
         <el-link href="#" class="side-title">Tags</el-link>
         <el-row class="m-tag">
-          <el-button round size="small" class="m-side-tag-button" v-for="t in hotTags" :key="t.id">{{t.name}}</el-button>
+          <el-button round size="small" class="m-side-tag-button" v-for="t in hotTags" :key="t.id">{{t.tagName}}</el-button>
         </el-row>
       </div>
       <hr>
       <!--hot category-->
       <div class="category-side">
         <el-link href="#" class="side-title">Category</el-link>
-        <br><br>
-        <el-link href="#" class="m-category">category1</el-link>
-        <br>
-        <el-link href="#" class="m-category">category2</el-link>
-        <br>
-        <el-link href="#" class="m-category">category3</el-link>
-        <br>
-        <el-link href="#" class="m-category">category4</el-link>
+        <el-row class="m-tag">
+          <el-button round size="small" class="m-side-tag-button" v-for="c in hotCategories" :key="c.id">{{c.categoryName}}</el-button>
+        </el-row>
       </div>
       <hr>
       <!--about me-->
@@ -34,21 +29,34 @@
 
 <script>
   import {getHotTags} from '../../api/tag'
+  import {getHotCategories} from '../../api/category'
 
   export default {
     name: 'Sider',
     created () {
       this.getHotTags()
+      this.getHotCategories()
     },
     data () {
       return {
         hotTags: [],
+        hotCategories: [],
       }
     },
     methods: {
       getHotTags () {
         getHotTags().then(response => {
           this.hotTags = response.data
+          console.info(response)
+        }).catch(error => {
+          if (error !== 'error') {
+            this.$message({type: 'error', message: 'hot tags fail!', showClose: true})
+          }
+        })
+      },
+      getHotCategories () {
+        getHotCategories().then(response => {
+          this.hotCategories = response.data
           console.info(response)
         }).catch(error => {
           if (error !== 'error') {
