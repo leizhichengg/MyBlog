@@ -4,16 +4,16 @@
       <!--hot tags-->
       <div class="tag-side">
         <el-link href="#" class="side-title">Tags</el-link>
-        <el-row class="m-tag">
-          <el-button round size="small" class="m-side-tag-button" v-for="t in hotTags" :key="t.id">{{t.tagName}}</el-button>
+        <el-row>
+          <el-button round size="small" class="m-side-button" v-for="t in hotTags" :key="t.id">{{t.tagName}}</el-button>
         </el-row>
       </div>
       <hr>
       <!--hot category-->
       <div class="category-side">
         <el-link href="#" class="side-title">Category</el-link>
-        <el-row class="m-tag">
-          <el-button round size="small" class="m-side-tag-button" v-for="c in hotCategories" :key="c.id">{{c.categoryName}}</el-button>
+        <el-row>
+          <el-button round size="small" class="m-side-button" v-for="c in hotCategories" :key="c.id">{{c.categoryName}}</el-button>
         </el-row>
       </div>
       <hr>
@@ -93,7 +93,7 @@
     margin-bottom: 20px;
   }
 
-  .m-side-tag-button {
+  .m-side-button {
     margin-bottom: 10px;
   }
 
@@ -104,8 +104,4 @@
     border-top: 1px solid #eee;
   }
 
-  .m-category {
-    font-size: 16px;
-    color: #cccccc;
-  }
 </style>

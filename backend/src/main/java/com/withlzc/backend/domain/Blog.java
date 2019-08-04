@@ -22,6 +22,7 @@ public class Blog {
 
     private String title;
 
+    @Lob
     private String content;
 
     /**

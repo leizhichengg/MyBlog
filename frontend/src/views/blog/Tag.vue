@@ -7,9 +7,9 @@
     <!--Main content-->
     <el-row class="tag-container">
       <el-col :span="14" :offset="5">
-        <!--          <el-button round size="small" class="m-side-tag-button">All <sup> 2</sup></el-button>-->
         <el-row class="m-tag">
-            <el-button round size="small" class="m-side-tag-button" v-for="t in tagList" :key="t.id">{{t.tagName}} <sup> 2</sup></el-button>
+          <el-button round size="small" class="m-tag-button">All <sup> 2</sup></el-button>
+          <el-button round size="small" class="m-tag-button" v-for="t in tagList" :key="t.id">{{t.tagName}} <sup> 2</sup></el-button>
         </el-row>
         <div class="tag-block" v-for="t in tagList" :key="t.id">
           <h3 class="m-tag-title">
@@ -106,7 +106,7 @@
     margin-bottom: 36px;
   }
 
-  .m-side-tag-button {
+  .m-tag-button {
     font-size: 14px;
     font-weight: bold;
   }
@@ -116,6 +116,7 @@
     margin-bottom: 40px;
     text-align: left;
     font-size: 20px;
+    font-weight: bold;
     color: #2A3F54;
   }
 

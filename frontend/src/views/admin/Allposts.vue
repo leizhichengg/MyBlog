@@ -7,7 +7,7 @@
         <el-input class="post-search" v-model="search" placeholder="Search Title..." prefix-icon="el-icon-search"/>
         <el-table
           height="540"
-          :data="tableData.filter(data => !search || data.title.toLowerCase().includes(search.toLowerCase()))"
+          :data="allPostData.filter(data => !search || data.title.toLowerCase().includes(search.toLowerCase()))"
           :header-cell-style="{color: '#60748A'}"
           style="width: 100%; color: #60748A">
           <el-table-column
@@ -70,7 +70,7 @@
         <span slot="label"><i class="el-icon-edit-outline"></i> Drafts</span>
         <el-table
           height="540"
-          :data="tableData1"
+          :data="draftData"
           :header-cell-style="{color: '#60748A'}"
           style="width: 100%; color: #60748A">
           <el-table-column
@@ -122,7 +122,7 @@
         <span slot="label"><i class="el-icon-delete"></i> Trash</span>
         <el-table
           height="540"
-          :data="tableData2"
+          :data="trashData"
           :header-cell-style="{color: '#60748A'}"
           style="width: 100%; color: #60748A">
           <el-table-column
@@ -176,19 +176,17 @@
 </template>
 
 <script>
+  import {getBlogList} from '../../api/blog'
+
   export default {
     name: 'Allposts',
-    methods: {
-      handleClick (row) {
-        console.log(row)
-      },
-      indexMethod (index) {
-        return index
-      }
+    created () {
+      this.getBlogList()
     },
     data () {
       return {
-        tableData: [{
+        blogList: [],
+        allPostData: [{
           title: 'Post Title',
           author: 'Lei',
           categories: 'Test',
@@ -196,106 +194,26 @@
           views: '12',
           comments: '3',
           date: '2016-05-03',
-        }, {
-          title: 'Post Title',
-          author: 'Lei',
-          categories: 'Test',
-          tags: 'Test',
-          views: '12',
-          comments: '3',
-          date: '2016-05-02',
-        }, {
-          title: '测试',
-          author: 'Lei',
-          categories: 'Test',
-          tags: 'Test',
-          views: '12',
-          comments: '3',
-          date: '2016-05-04',
-        }, {
-          title: 'Post Title',
-          author: 'Lei',
-          categories: 'Test',
-          tags: 'Test',
-          views: '12',
-          comments: '3',
-          date: '2016-05-01',
-        }, {
-          title: 'Post Title',
-          author: 'Lei',
-          categories: 'Test',
-          tags: 'Test',
-          views: '12',
-          comments: '3',
-          date: '2016-05-08',
-        }, {
-          title: 'Post Test',
-          author: 'Lei',
-          categories: 'Test',
-          tags: 'Test',
-          views: '12',
-          comments: '3',
-          date: '2016-05-06',
-        }, {
-          title: 'Post Title',
-          author: 'Lei',
-          categories: 'Test',
-          tags: 'Test',
-          views: '12',
-          comments: '3',
-          date: '2016-05-07',
-        }, {
-          title: 'Post Title',
-          author: 'Lei',
-          categories: 'Test',
-          tags: 'Test',
-          views: '12',
-          comments: '3',
-          date: '2016-05-07',
-        }, {
-          title: 'Post Title',
-          author: 'Lei',
-          categories: 'Test',
-          tags: 'Test',
-          views: '12',
-          comments: '3',
-          date: '2016-05-07',
-        }],
-        tableData1: [{
-          title: 'Post Title',
-          author: 'Lei',
-          categories: 'Test',
-          tags: 'Test',
-          views: '12',
-          comments: '3',
-          date: '2016-05-07',
-        }, {
-          title: 'Post Title',
-          author: 'Lei',
-          categories: 'Test',
-          tags: 'Test',
-          views: '12',
-          comments: '3',
-          date: '2016-05-07',
-        }],
-        tableData2: [{
-          title: 'Post Title',
-          author: 'Lei',
-          categories: 'Test',
-          tags: 'Test',
-          views: '12',
-          comments: '3',
-          date: '2016-05-07',
-        }, {
-          title: 'Post Title',
-          author: 'Lei',
-          categories: 'Test',
-          tags: 'Test',
-          views: '12',
-          comments: '3',
-          date: '2016-05-07',
         }],
         search: ''
+      }
+    },
+    methods: {
+      handleClick (row) {
+        console.log(row)
+      },
+      indexMethod (index) {
+        return index
+      },
+      getBlogList () {
+        getBlogList().then(response => {
+          this.blogList = response.data
+          console.info(response)
+        }).catch(error => {
+          if (error !== 'error') {
+            this.$message({type: 'error', message: 'get blog list fail!', showClose: true})
+          }
+        })
       }
     }
   }

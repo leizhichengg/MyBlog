@@ -1,53 +1,48 @@
 <template>
   <div class="m-content">
-    <div class="post-preview">
+
+    <div class="post-preview"  v-for="b in blogList" :key="b.id">
       <router-link to="/post" class="router-link-active">
-        <h2 class="post-title">Title test</h2>
-        <h3 class="post-subtitle">Subtitle test</h3>
+        <h2 class="post-title">{{b.title}}</h2>
+<!--        <h3 class="post-subtitle">Subtitle test</h3>-->
         <div class="post-content-preview">
-          content preview test content preview test content preview test content preview test content preview test content preview test content preview test
+          {{b.content}}
         </div>
       </router-link>
       <p class="post-meta">
-        Post by *** on July 12, 2019
+        Post by *** on {{b.createTime}}
       </p>
+      <hr>
     </div>
-    <hr>
-
-    <div class="post-preview">
-      <el-link :underline="false" href="#">
-        <h2 class="post-title">Title test</h2>
-        <h3 class="post-subtitle">Subtitle test</h3>
-        <div class="post-content-preview">
-          content preview test content preview test content preview test content preview test content preview test content preview test content preview test
-        </div>
-      </el-link>
-      <p class="post-meta">
-        Post by *** on July 12, 2019
-      </p>
-    </div>
-    <hr>
-
-    <div class="post-preview">
-      <el-link :underline="false" href="#">
-        <h2 class="post-title">Title test</h2>
-        <h3 class="post-subtitle">Subtitle test</h3>
-        <div class="post-content-preview">
-          content preview test content preview test content preview test content preview test content preview test content preview test content preview test
-        </div>
-      </el-link>
-      <p class="post-meta">
-        Post by *** on July 12, 2019
-      </p>
-    </div>
-    <hr>
 
   </div>
 </template>
 
 <script>
+  import {getBlogList} from '../../api/blog'
+
   export default {
     name: 'Content',
+    created () {
+      this.getBlogList()
+    },
+    data () {
+      return {
+        blogList: [],
+      }
+    },
+    methods: {
+      getBlogList () {
+        getBlogList().then(response => {
+          this.blogList = response.data
+          console.info(response)
+        }).catch(error => {
+          if (error !== 'error') {
+            this.$message({type: 'error', message: 'get blog list fail!', showClose: true})
+          }
+        })
+      }
+    }
 
   }
 </script>
