@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="home">
     <b-nav></b-nav>
     <b-header></b-header>
     <br>
@@ -50,7 +50,7 @@
     max-width: 1000px;
     clear: both;
     margin: 0 auto;
-    padding: 60px 30px 0;
+    padding: 30px 30px 0;
     /*padding-right: 15px;*/
     /*padding-left: 15px;*/
     /*margin-right: auto;*/

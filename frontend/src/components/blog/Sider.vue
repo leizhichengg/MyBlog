@@ -1,19 +1,19 @@
 <template>
   <div class="m-side">
     <div class="sidebar">
-      <!--hot tags-->
-      <div class="tag-side">
-        <el-link href="#" class="side-title">Tags</el-link>
-        <el-row>
-          <el-button round size="small" class="m-side-button" v-for="t in hotTags" :key="t.id">{{t.tagName}}</el-button>
-        </el-row>
-      </div>
-      <hr>
       <!--hot category-->
       <div class="category-side">
         <el-link href="#" class="side-title">Category</el-link>
         <el-row>
           <el-button round size="small" class="m-side-button" v-for="c in hotCategories" :key="c.id">{{c.categoryName}}</el-button>
+        </el-row>
+      </div>
+      <hr>
+      <!--hot tags-->
+      <div class="tag-side">
+        <el-link href="#" class="side-title">Tags</el-link>
+        <el-row>
+          <el-button round size="small" class="m-side-button" v-for="t in hotTags" :key="t.id">{{t.tagName}}</el-button>
         </el-row>
       </div>
       <hr>
@@ -109,12 +109,13 @@
   }
 
   .m-side-button {
-    margin-bottom: 10px;
+    margin: 0 10px 10px 0;
   }
 
   .social-icons {
-    margin-bottom: 10px;
-    margin-right: 5px;
+    /*margin-bottom: 10px;*/
+    /*margin-right: 5px;*/
+    margin: 0 13px 10px 0;
   }
 
   hr {

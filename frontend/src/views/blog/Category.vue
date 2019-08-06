@@ -76,29 +76,31 @@
   .a-header {
     background: #ccc url("/static/img/category-bg.jpg") scroll;
     background-size: cover;
-    padding: 0 50px;
+    padding: 100px 0;
     /*text-align: left;*/
     /*width: 1200px;*/
-    margin-left: -8px;
-    margin-right: -8px;
-    margin-top: -136px;
+    /*margin-left: -8px;*/
+    /*margin-right: -8px;*/
+    margin-top: -60px;
     /*max-width: 100%;*/
-    height: 300px;
+    /*height: 300px;*/
     color: white;
   }
 
   .m-title {
     font-size: 45px;
-    padding-top: 150px;
-    text-align: center;
+    /*padding-top: 150px;*/
+    /*text-align: center;*/
   }
 
   .category-container {
-    width: 1200px;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+    max-width: 1200px;
+    /*padding: 30px 30px 0;*/
+    /*padding-right: 15px;*/
+    /*padding-left: 15px;*/
+    margin: 0 auto;
+    /*margin-right: auto;*/
+    /*margin-left: auto;*/
   }
 
   .m-category {

@@ -21,21 +21,23 @@
     background-size: cover;
     /*padding: 0 20px;*/
     /*width: 1400px;*/
-    margin-left: -8px;
-    margin-right: -10px;
-    margin-top: -68px;
+    /*margin-left: -8px;*/
+    /*margin-right: -10px;*/
+    margin-top: -60px;
   }
+
   .m-heading {
-    padding: 50px 0;
+    padding: 100px 0;
     color: white;
-    margin-top: 0px;
+    /*margin-top: 0px;*/
     font-size: 50px;
   }
+
   .subheading {
-    font-size: 18px;
-    line-height: 1.1;
+    font-size: 20px;
+    /*line-height: 1.1;*/
     display: block;
-    font-weight: 300;
-    margin-top: -30px;
+    /*font-weight: 300;*/
+    /*margin-top: -30px;*/
   }
 </style>

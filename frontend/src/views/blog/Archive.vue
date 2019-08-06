@@ -5,27 +5,29 @@
       <h1 class="m-title">Archive</h1>
     </header>
     <!--Main content-->
-    <el-row :gutter="20">
+    <el-row class="archive-container">
       <el-col :span="14" :offset="5">
-        <div class="m-time-tag">
-          <el-button round size="small" class="m-side-tag-button">All <sup> 2</sup></el-button>
-          <el-button round size="small" class="m-side-tag-button">2019 <sup> 2</sup></el-button>
-          <el-button round size="small" class="m-side-tag-button">2018 <sup> 2</sup></el-button>
-        </div>
-        <div class="time-block">
-          <div class="m-time-title">
+        <el-row class="m-archive">
+          <el-button round size="small" class="m-archive-button">All <sup> 2</sup></el-button>
+          <el-button round size="small" class="m-archive-button">2019 <sup> 2</sup></el-button>
+          <el-button round size="small" class="m-archive-button">2018 <sup> 2</sup></el-button>
+        </el-row>
+
+        <div class="archive-block">
+          <div class="m-archive-title">
+            <i class="el-icon-ali-tag"></i>
             2019
           </div>
           <!--post list-->
           <div class="m-post-list">
             <div class="m-post">
-              <h3>Post title</h3>
-              <h4>2019-2-9</h4>
+              <h2>Post title</h2>
+              <h5>2019-2-9</h5>
               <hr>
             </div>
             <div class="m-post">
-              <h3>Post title</h3>
-              <h4>2019-2-9</h4>
+              <h2>Post title</h2>
+              <h5>2019-2-9</h5>
               <hr>
             </div>
           </div>
@@ -59,35 +61,51 @@
   .a-header {
     background: #ccc url("/static/img/archive-bg.jpg") scroll;
     background-size: cover;
-    padding: 0 50px;
+    padding: 100px 0;
     /*text-align: left;*/
     /*width: 1200px;*/
-    margin-left: -8px;
-    margin-right: -8px;
-    margin-top: -136px;
+    /*margin-left: -8px;*/
+    /*margin-right: -8px;*/
+    margin-top: -60px;
     /*max-width: 100%;*/
-    height: 300px;
+    /*height: 300px;*/
     color: white;
   }
 
   .m-title {
     font-size: 45px;
-    padding-top: 150px;
-    text-align: center;
+    /*padding-top: 120px;*/
+    /*text-align: center;*/
   }
 
-  .m-time-tag {
+  .archive-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .m-archive {
     margin-top: 36px;
     text-align: left;
+    margin-bottom: 36px;
   }
 
-  .m-time-title {
+  .m-archive-button {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .m-archive-title {
     margin-top: 24px;
+    margin-bottom: 40px;
     text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2A3F54;
   }
   .m-post-list {
     text-align: left;
     padding-left: 12px;
+    font-size: 20px;
   }
   hr {
     margin-top: 20px;
