@@ -4,8 +4,10 @@
 <!--    <el-button icon="el-icon-ali-github-fill" size="small" circle class="social-icons"></el-button>-->
 <!--    <el-button icon="el-icon-ali-linkedin-fill" size="small" circle class="social-icons"></el-button>-->
 <!--    <br>-->
-    <p>Copyright © lzc Blog 2019</p>
-    <p>Designed by lzc</p>
+    <p>Copyright © 2019 · Designed by
+    <a href="mailto:withlzc@gmail.com">withlzc</a>
+    </p>
+<!--    <p>Designed by lzc</p>-->
   </div>
 </template>
 

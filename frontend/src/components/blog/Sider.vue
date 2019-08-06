@@ -5,7 +5,9 @@
       <div class="category-side">
         <el-link href="#" class="side-title">Category</el-link>
         <el-row>
-          <el-button round size="small" class="m-side-button" v-for="c in hotCategories" :key="c.id">{{c.categoryName}}</el-button>
+          <el-button round size="small" class="m-side-button" v-for="c in hotCategories" :key="c.id">
+            {{c.categoryName}}
+          </el-button>
         </el-row>
       </div>
       <hr>
@@ -31,11 +33,11 @@
       </div>
       <hr>
       <!--about me-->
-      <div class="about-me-side">
-        <div class="side-title">About me</div>
-        <br>
-        <p>about me something whatever</p>
-      </div>
+      <!--      <div class="about-me-side">-->
+      <!--        <div class="side-title">About me</div>-->
+      <!--        <br>-->
+      <!--        <p>about me something whatever</p>-->
+      <!--      </div>-->
     </div>
   </div>
 </template>
