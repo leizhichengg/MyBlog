@@ -31,7 +31,7 @@
 <!--            label="Author">-->
 <!--          </el-table-column>-->
           <el-table-column
-            prop="category"
+            prop="category.categoryName"
             label="Category">
           </el-table-column>
           <el-table-column
@@ -47,7 +47,7 @@
             label="Comments">
           </el-table-column>
           <el-table-column
-            prop="date"
+            prop="createTime"
             label="Date"
             sortable>
           </el-table-column>
@@ -221,7 +221,7 @@
       getAllPosts () {
         getAllPosts().then(response => {
           this.allPostData = response.data
-          console.info(response)
+          console.info(this.allPostData)
         }).catch(error => {
           if (error !== 'error') {
             this.$message({type: 'error', message: 'get allPostData list fail!', showClose: true})
