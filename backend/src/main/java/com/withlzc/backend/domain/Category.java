@@ -1,5 +1,7 @@
 package com.withlzc.backend.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +22,7 @@ public class Category {
     private String categoryName;
 
     @OneToMany(mappedBy = "category")
+    @JsonBackReference
     private List<Blog> blogs = new ArrayList<>();
 
     public Category() {

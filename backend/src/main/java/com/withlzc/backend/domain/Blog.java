@@ -1,6 +1,8 @@
 package com.withlzc.backend.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -42,11 +44,11 @@ public class Blog {
      * Many作为关系维护端
      */
     @ManyToOne
-    @JsonIgnore
+    @JsonManagedReference
     private Category category;
 
     @ManyToMany(cascade = {CascadeType.PERSIST})
-    @JsonIgnore
+    @JsonManagedReference
     private List<Tag> tags = new ArrayList<>();
 
     @OneToMany(mappedBy = "blog")

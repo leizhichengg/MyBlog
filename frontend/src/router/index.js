@@ -62,7 +62,7 @@ export const constantRoutes = [
     }, {
       path: 'posts/all-posts',
       name: 'Tags',
-      component: () => import('@/views/admin/Allposts'),
+      component: () => import('@/views/admin/PostsList'),
       meta: {title: 'Tag', icon: 'tag'}
     }, {
       path: 'posts/categories',

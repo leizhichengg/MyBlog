@@ -26,13 +26,13 @@
             </template>
 
           </el-table-column>
+<!--          <el-table-column-->
+<!--            prop="author"-->
+<!--            label="Author">-->
+<!--          </el-table-column>-->
           <el-table-column
-            prop="author"
-            label="Author">
-          </el-table-column>
-          <el-table-column
-            prop="categories"
-            label="Categories">
+            prop="category"
+            label="Category">
           </el-table-column>
           <el-table-column
             prop="tags"
@@ -83,13 +83,13 @@
             prop="title"
             label="Title">
           </el-table-column>
+<!--          <el-table-column-->
+<!--            prop="author"-->
+<!--            label="Author">-->
+<!--          </el-table-column>-->
           <el-table-column
-            prop="author"
-            label="Author">
-          </el-table-column>
-          <el-table-column
-            prop="categories"
-            label="Categories">
+            prop="category"
+            label="Category">
           </el-table-column>
           <el-table-column
             prop="tags"
@@ -135,13 +135,13 @@
             prop="title"
             label="Title">
           </el-table-column>
+<!--          <el-table-column-->
+<!--            prop="author"-->
+<!--            label="Author">-->
+<!--          </el-table-column>-->
           <el-table-column
-            prop="author"
-            label="Author">
-          </el-table-column>
-          <el-table-column
-            prop="categories"
-            label="Categories">
+            prop="category"
+            label="Category">
           </el-table-column>
           <el-table-column
             prop="tags"
@@ -179,7 +179,7 @@
   import {getBlogList, getAllPosts} from '../../api/blog'
 
   export default {
-    name: 'Allposts',
+    name: 'PostsList',
     created () {
       this.getBlogList()
       this.getAllPosts()
@@ -189,8 +189,8 @@
         blogList: [],
         allPostData: [{
           title: 'Post Title',
-          author: 'Lei',
-          categories: 'Test',
+          // author: 'Lei',
+          category: 'Test',
           tags: 'Test',
           views: '12',
           comments: '3',
@@ -221,7 +221,7 @@
       getAllPosts () {
         getAllPosts().then(response => {
           this.allPostData = response.data
-          // console.info(response)
+          console.info(response)
         }).catch(error => {
           if (error !== 'error') {
             this.$message({type: 'error', message: 'get allPostData list fail!', showClose: true})
