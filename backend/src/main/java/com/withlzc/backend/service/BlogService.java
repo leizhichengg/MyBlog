@@ -29,4 +29,6 @@ public interface BlogService {
     List<Blog> getBlogByCategory(Long id);
 
     List<Blog> getBlogByTag(Long id);
+
+    List<Blog> getBlogByState(int state);
 }

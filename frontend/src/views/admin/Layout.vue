@@ -39,7 +39,7 @@
 
   .main-container {
     min-height: 100%;
-    margin: -8px -8px -8px 222px;
+    margin: 0 0 0 230px;
     /* 100% - sidebarWidth */
     width: calc(100% - 230px);
     /*height: 110%;*/

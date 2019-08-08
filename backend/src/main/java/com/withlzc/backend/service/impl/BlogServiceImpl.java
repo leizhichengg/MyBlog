@@ -112,4 +112,10 @@ public class BlogServiceImpl implements BlogService {
         Optional<Tag> tag = tagRepository.findById(id);
         return tag.map(value -> blogRepository.findBlogByTags(value)).orElse(null);
     }
+
+    @Transactional
+    @Override
+    public List<Blog> getBlogByState(int state) {
+        return blogRepository.findBlogByState(state);
+    }
 }

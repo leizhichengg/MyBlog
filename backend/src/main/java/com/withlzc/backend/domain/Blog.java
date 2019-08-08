@@ -145,6 +145,9 @@ public class Blog {
                 ", views=" + views +
                 ", createTime=" + createTime +
                 ", updateTime=" + updateTime +
+                ", category=" + category +
+                ", tags=" + tags +
+                ", comments=" + comments +
                 '}';
     }
 }

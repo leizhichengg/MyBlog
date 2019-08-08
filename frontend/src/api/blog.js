@@ -11,6 +11,13 @@ export function getBlogList () {
   })
 }
 
+export function getAllPosts () {
+  return HttpRequest({
+    url: '/blog/list/allposts',
+    method: 'get'
+  })
+}
+
 export function getHotBlog () {
   return HttpRequest({
     url: '/blog/hot',

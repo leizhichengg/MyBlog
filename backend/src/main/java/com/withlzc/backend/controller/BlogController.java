@@ -23,7 +23,23 @@ public class BlogController {
 
     @GetMapping("/list")
     public List<Blog> list() {
+//        System.out.println(blogService.listBlog());
         return blogService.listBlog();
+    }
+
+    @GetMapping("/list/allposts")
+    public List<Blog> allPosts() {
+        return blogService.getBlogByState(1);
+    }
+
+    @GetMapping("/list/drafts")
+    public List<Blog> drafts() {
+        return blogService.getBlogByState(0);
+    }
+
+    @GetMapping("/list/trash")
+    public List<Blog> trash() {
+        return blogService.getBlogByState(2);
     }
 
     /**

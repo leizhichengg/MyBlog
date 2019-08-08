@@ -176,12 +176,13 @@
 </template>
 
 <script>
-  import {getBlogList} from '../../api/blog'
+  import {getBlogList, getAllPosts} from '../../api/blog'
 
   export default {
     name: 'Allposts',
     created () {
       this.getBlogList()
+      this.getAllPosts()
     },
     data () {
       return {
@@ -195,6 +196,8 @@
           comments: '3',
           date: '2016-05-03',
         }],
+        draftData: [],
+        trashData: [],
         search: ''
       }
     },
@@ -208,14 +211,24 @@
       getBlogList () {
         getBlogList().then(response => {
           this.blogList = response.data
-          console.info(response)
+          // console.info(response)
         }).catch(error => {
           if (error !== 'error') {
             this.$message({type: 'error', message: 'get blog list fail!', showClose: true})
           }
         })
+      },
+      getAllPosts () {
+        getAllPosts().then(response => {
+          this.allPostData = response.data
+          // console.info(response)
+        }).catch(error => {
+          if (error !== 'error') {
+            this.$message({type: 'error', message: 'get allPostData list fail!', showClose: true})
+          }
+        })
       }
-    }
+    },
   }
 </script>
 
