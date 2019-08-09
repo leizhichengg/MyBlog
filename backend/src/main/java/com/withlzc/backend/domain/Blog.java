@@ -34,10 +34,10 @@ public class Blog {
 
     private Integer views;
 
-    @Temporal(TemporalType.TIMESTAMP)
+    @Temporal(TemporalType.DATE)
     private Date createTime;
 
-    @Temporal(TemporalType.TIMESTAMP)
+    @Temporal(TemporalType.DATE)
     private Date updateTime;
 
     /**
