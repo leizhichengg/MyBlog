@@ -19,12 +19,12 @@
 </template>
 
 <script>
-  import {getBlogList} from '../../api/blog'
+  import {getAllPosts} from '../../api/blog'
 
   export default {
     name: 'Content',
     created () {
-      this.getBlogList()
+      this.getAllPosts()
     },
     data () {
       return {
@@ -32,8 +32,8 @@
       }
     },
     methods: {
-      getBlogList () {
-        getBlogList().then(response => {
+      getAllPosts () {
+        getAllPosts().then(response => {
           this.blogList = response.data
           console.info(response)
         }).catch(error => {
@@ -49,7 +49,7 @@
 
 <style scoped>
   .m-content {
-    float: left;
+    /*float: left;*/
     background: transparent;
   }
 
@@ -64,7 +64,7 @@
   }
 
   .post-title {
-    margin-top: 30px;
+    /*margin-top: 30px;*/
     color: black;
     font-size: 30px;
     line-height: 1.3;

@@ -40,7 +40,8 @@
           </el-table-column>
           <el-table-column
             prop="views"
-            label="Views">
+            label="Views"
+            sortable>
           </el-table-column>
           <el-table-column
             prop="comments"
@@ -97,7 +98,8 @@
           </el-table-column>
           <el-table-column
             prop="views"
-            label="Views">
+            label="Views"
+            sortable>
           </el-table-column>
           <el-table-column
             prop="comments"
@@ -149,7 +151,8 @@
           </el-table-column>
           <el-table-column
             prop="views"
-            label="Views">
+            label="Views"
+            sortable>
           </el-table-column>
           <el-table-column
             prop="comments"
@@ -161,8 +164,7 @@
             sortable>
           </el-table-column>
           <el-table-column
-            label="Actions"
-            width="140">
+            label="Actions">
             <template slot-scope="scope">
               <el-button @click="handleClick(scope.row)" type="text" size="small">Restore</el-button>
               <el-button type="text" size="small">Remove</el-button>
@@ -176,13 +178,15 @@
 </template>
 
 <script>
-  import {getBlogList, getAllPosts} from '../../api/blog'
+  import {getBlogList, getAllPosts, getPostDrafts, getPostTrash} from '../../api/blog'
 
   export default {
     name: 'PostsList',
     created () {
-      this.getBlogList()
+      // this.getBlogList()
       this.getAllPosts()
+      this.getPostDrafts()
+      this.getPostTrash()
     },
     data () {
       return {
@@ -211,7 +215,7 @@
       getBlogList () {
         getBlogList().then(response => {
           this.blogList = response.data
-          // console.info(response)
+          console.info(response)
         }).catch(error => {
           if (error !== 'error') {
             this.$message({type: 'error', message: 'get blog list fail!', showClose: true})
@@ -225,6 +229,26 @@
         }).catch(error => {
           if (error !== 'error') {
             this.$message({type: 'error', message: 'get allPostData list fail!', showClose: true})
+          }
+        })
+      },
+      getPostDrafts () {
+        getPostDrafts().then(response => {
+          this.draftData = response.data
+          console.info(this.draftData)
+        }).catch(error => {
+          if (error !== 'error') {
+            this.$message({type: 'error', message: 'get draftData list fail!', showClose: true})
+          }
+        })
+      },
+      getPostTrash () {
+        getPostTrash().then(response => {
+          this.trashData = response.data
+          console.info(this.trashData)
+        }).catch(error => {
+          if (error !== 'error') {
+            this.$message({type: 'error', message: 'get trashData list fail!', showClose: true})
           }
         })
       }

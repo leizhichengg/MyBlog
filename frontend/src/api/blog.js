@@ -18,6 +18,20 @@ export function getAllPosts () {
   })
 }
 
+export function getPostDrafts () {
+  return HttpRequest({
+    url: '/blog/list/drafts',
+    method: 'get'
+  })
+}
+
+export function getPostTrash () {
+  return HttpRequest({
+    url: '/blog/list/trash',
+    method: 'get'
+  })
+}
+
 export function getHotBlog () {
   return HttpRequest({
     url: '/blog/hot',

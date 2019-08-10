@@ -23,7 +23,6 @@ public class BlogController {
 
     @GetMapping("/list")
     public List<Blog> list() {
-//        System.out.println(blogService.listBlog());
         return blogService.listBlog();
     }
 
