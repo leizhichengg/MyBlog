@@ -24,6 +24,8 @@
   .m-footer {
     font-size: 16px;
     margin-top: 50px;
+    /*padding-bottom: 50px;*/
+    margin-bottom: 20px;
   }
 
   .m-icon {

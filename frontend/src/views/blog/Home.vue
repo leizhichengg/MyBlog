@@ -1,7 +1,7 @@
 <template>
   <div id="home">
     <b-nav></b-nav>
-    <b-header></b-header>
+<!--    <b-header></b-header>-->
     <br>
     <br>
     <div class="m-container">
@@ -20,9 +20,9 @@
 </template>
 
 <script>
-  import Header from '@/components/blog/Header'
+  // import Header from '@/components/blog/Header'
   import Footer from '@/components/blog/Footer'
-  import Navbar from '@/components/blog/navbar/HomeNavBar'
+  import Navbar from '@/components/blog/Navbar'
   import Content from '@/components/blog/Content'
   import Sider from '@/components/blog/Sider'
   import Page from '@/components/blog/Page'
@@ -36,7 +36,7 @@
     },
     components: {
       'b-nav': Navbar,
-      'b-header': Header,
+      // 'b-header': Header,
       'b-footer': Footer,
       'b-content': Content,
       'b-sider': Sider,

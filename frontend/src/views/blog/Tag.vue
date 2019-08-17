@@ -1,9 +1,9 @@
 <template>
   <div>
     <b-nav/>
-    <header class="a-header">
-      <h1 class="m-title">Tag</h1>
-    </header>
+<!--    <header class="a-header">-->
+<!--      <h1 class="m-title">Tag</h1>-->
+<!--    </header>-->
     <!--Main content-->
     <el-row class="tag-container">
       <el-col :span="14" :offset="5">
@@ -35,9 +35,9 @@
 </template>
 
 <script>
-  import Navbar from '@/components/blog/navbar/HomeNavBar'
+  import Navbar from '@/components/blog/Navbar'
   import Footer from '@/components/blog/Footer'
-  import Header from '@/components/blog/Header'
+  // import Header from '@/components/blog/Header'
   import {getTagList} from '../../api/tag'
 
   export default {
@@ -64,7 +64,7 @@
       }
     },
     components: {
-      Header,
+      // Header,
       'b-nav': Navbar,
       'b-footer': Footer,
     }
@@ -88,8 +88,8 @@
 
   .tag-container {
     max-width: 1200px;
-    padding-right: 15px;
-    padding-left: 15px;
+    /*padding-right: 15px;*/
+    /*padding-left: 15px;*/
     margin: 0 auto;
     /*margin-right: auto;*/
     /*margin-left: auto;*/

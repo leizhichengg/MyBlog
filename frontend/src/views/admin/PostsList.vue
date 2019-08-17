@@ -83,6 +83,11 @@
           <el-table-column
             prop="title"
             label="Title">
+            <template slot-scope="scope">
+              <router-link to="/">
+                {{scope.row.title}}
+              </router-link>
+            </template>
           </el-table-column>
 <!--          <el-table-column-->
 <!--            prop="author"-->

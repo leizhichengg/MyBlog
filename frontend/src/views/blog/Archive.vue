@@ -1,9 +1,9 @@
 <template>
   <div>
     <b-nav/>
-    <header class="a-header">
-      <h1 class="m-title">Archive</h1>
-    </header>
+    <!--    <header class="a-header">-->
+    <!--      <h1 class="m-title">Archive</h1>-->
+    <!--    </header>-->
     <!--Main content-->
     <el-row class="archive-container">
       <el-col :span="14" :offset="5">
@@ -39,9 +39,8 @@
 </template>
 
 <script>
-  import Navbar from '@/components/blog/navbar/HomeNavBar'
+  import Navbar from '@/components/blog/Navbar'
   import Footer from '@/components/blog/Footer'
-  // import Header from '../components/layout/Header'
 
   export default {
     name: 'Archive',
@@ -102,11 +101,13 @@
     font-weight: bold;
     color: #2A3F54;
   }
+
   .m-post-list {
     text-align: left;
     padding-left: 12px;
     font-size: 20px;
   }
+
   hr {
     margin-top: 20px;
     margin-bottom: 20px;

@@ -16,7 +16,8 @@
           <el-link href="/tag" class="navbar-text ">Tag</el-link>
         </router-link>
         &nbsp;&nbsp;
-        <el-input class="m-search" v-model="input" suffix-icon="el-icon-search" placeholder="Search something..."></el-input>
+        <el-input class="m-search" v-model="input" suffix-icon="el-icon-search"
+                  placeholder="Search something..."></el-input>
       </div>
     </div>
   </div>
@@ -35,36 +36,48 @@
 
 <style scoped>
   .m-nav {
-    height: 60px;
-    line-height: 60px;
+    height: 70px;
+    line-height: 70px;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   }
+
   .container-fluid {
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    background: transparent;
+    /*background: transparent;*/
   }
+
   .m-menu {
     float: right;
     font-weight: bold;
     /*color: white;*/
-    text-align: center;
+    /*text-align: center;*/
+    vertical-align: center;
+    /*margin-top: 20px;*/
   }
+
   .m-search {
     float: right;
     vertical-align: center;
     width: 250px;
   }
+
   .navbar-text {
     font-size: 16px;
     color: #404040;
     margin-left: -15px;
     padding: 20px;
-    line-height: 20px;
+    line-height: 30px;
     float: left;
     font-weight: bold;
   }
+
   .navbar-brand {
     font-size: 20px;
   }
