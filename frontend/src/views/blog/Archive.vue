@@ -57,25 +57,19 @@
 </script>
 
 <style scoped>
-  .a-header {
-    background: #ccc url("/static/img/archive-bg.jpg") scroll;
-    background-size: cover;
-    padding: 100px 0;
-    /*text-align: left;*/
-    /*width: 1200px;*/
-    /*margin-left: -8px;*/
-    /*margin-right: -8px;*/
-    margin-top: -60px;
-    /*max-width: 100%;*/
-    /*height: 300px;*/
-    color: white;
-  }
-
-  .m-title {
-    font-size: 45px;
-    /*padding-top: 120px;*/
-    /*text-align: center;*/
-  }
+  /*.a-header {*/
+  /*  background: #ccc url("/static/img/archive-bg.jpg") scroll;*/
+  /*  background-size: cover;*/
+  /*  padding: 100px 0;*/
+  /*  !*text-align: left;*!*/
+  /*  !*width: 1200px;*!*/
+  /*  !*margin-left: -8px;*!*/
+  /*  !*margin-right: -8px;*!*/
+  /*  margin-top: -60px;*/
+  /*  !*max-width: 100%;*!*/
+  /*  !*height: 300px;*!*/
+  /*  color: white;*/
+  /*}*/
 
   .archive-container {
     max-width: 1200px;

@@ -11,6 +11,10 @@ export function getCategoryList () {
   })
 }
 
+// export function getBlogCountByCategory () {
+//
+// }
+
 export function getHotCategories () {
   return HttpRequest({
     url: '/category/hot',

@@ -50,12 +50,12 @@
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    /*background: transparent;*/
   }
 
   .m-menu {
     float: right;
     font-weight: bold;
+    background: #fff;
     /*color: white;*/
     /*text-align: center;*/
     vertical-align: center;
@@ -81,4 +81,5 @@
   .navbar-brand {
     font-size: 20px;
   }
+
 </style>
