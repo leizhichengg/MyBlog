@@ -10,7 +10,7 @@
         <el-row class="m-category">
           <el-button round size="small" class="m-category-button">All <sup> 2</sup></el-button>
           <el-button round size="small" class="m-category-button" v-for="c in categoryList" :key="c.id">
-            {{c.categoryName}} <sup> 2</sup></el-button>
+            {{c.categoryName}} <sup> {{c.blogCount}}</sup></el-button>
         </el-row>
 
         <div class="category-block" v-for="c in categoryList" :key="c.id">
@@ -74,25 +74,19 @@
 </script>
 
 <style scoped>
-  .a-header {
-    background: #ccc url("/static/img/category-bg.jpg") scroll;
-    background-size: cover;
-    padding: 100px 0;
-    /*text-align: left;*/
-    /*width: 1200px;*/
-    /*margin-left: -8px;*/
-    /*margin-right: -8px;*/
-    margin-top: -60px;
-    /*max-width: 100%;*/
-    /*height: 300px;*/
-    color: white;
-  }
-
-  .m-title {
-    font-size: 45px;
-    /*padding-top: 150px;*/
-    /*text-align: center;*/
-  }
+  /*.a-header {*/
+  /*  background: #ccc url("/static/img/category-bg.jpg") scroll;*/
+  /*  background-size: cover;*/
+  /*  padding: 100px 0;*/
+  /*  !*text-align: left;*!*/
+  /*  !*width: 1200px;*!*/
+  /*  !*margin-left: -8px;*!*/
+  /*  !*margin-right: -8px;*!*/
+  /*  margin-top: -60px;*/
+  /*  !*max-width: 100%;*!*/
+  /*  !*height: 300px;*!*/
+  /*  color: white;*/
+  /*}*/
 
   .category-container {
     max-width: 1200px;

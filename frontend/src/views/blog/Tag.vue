@@ -9,7 +9,7 @@
       <el-col :span="14" :offset="5">
         <el-row class="m-tag">
           <el-button round size="small" class="m-tag-button">All <sup> 2</sup></el-button>
-          <el-button round size="small" class="m-tag-button" v-for="t in tagList" :key="t.id">{{t.tagName}} <sup> 2</sup></el-button>
+          <el-button round size="small" class="m-tag-button" v-for="t in tagList" :key="t.id">{{t.tagName}} <sup> {{t.blogCount}}</sup></el-button>
         </el-row>
         <div class="tag-block" v-for="t in tagList" :key="t.id">
           <h3 class="m-tag-title">
@@ -72,19 +72,19 @@
 </script>
 
 <style scoped>
-  .a-header {
-    background: #ccc url("/static/img/tag-bg.jpg") scroll;
-    background-size: cover;
-    padding: 100px 0;
-    /*text-align: left;*/
-    /*width: 1200px;*/
-    /*margin-left: -8px;*/
-    /*margin-right: -8px;*/
-    margin-top: -60px;
-    /*max-width: 100%;*/
-    /*height: 300px;*/
-    color: white;
-  }
+  /*.a-header {*/
+  /*  background: #ccc url("/static/img/tag-bg.jpg") scroll;*/
+  /*  background-size: cover;*/
+  /*  padding: 100px 0;*/
+  /*  !*text-align: left;*!*/
+  /*  !*width: 1200px;*!*/
+  /*  !*margin-left: -8px;*!*/
+  /*  !*margin-right: -8px;*!*/
+  /*  margin-top: -60px;*/
+  /*  !*max-width: 100%;*!*/
+  /*  !*height: 300px;*!*/
+  /*  color: white;*/
+  /*}*/
 
   .tag-container {
     max-width: 1200px;
@@ -93,12 +93,6 @@
     margin: 0 auto;
     /*margin-right: auto;*/
     /*margin-left: auto;*/
-  }
-
-  .m-title {
-    font-size: 45px;
-    /*padding-top: 150px;*/
-    /*text-align: center;*/
   }
 
   .m-tag {
