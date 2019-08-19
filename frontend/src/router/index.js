@@ -1,13 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import Home from '@/views/blog/Home'
-// import Archive from '@/views/blog/Archive'
-// import Category from '@/views/blog/Category'
-// import Tag from '@/views/blog/Tag'
-// import Post from '@/views/blog/Post'
-// import Login from '@/views/admin/Login'
-import Layout from '../views/admin/Layout'
-import Newpost from '../views/admin/Newpost'
 
 Vue.use(Router)
 
@@ -47,7 +39,7 @@ export const constantRoutes = [
   {
     path: '/admin',
     name: 'Dashboard',
-    component: Layout,
+    component: () => import('@/views/admin/Layout'),
     redirect: '/admin/dashboard',
     children: [{
       path: 'dashboard',

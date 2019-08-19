@@ -55,8 +55,8 @@
           <el-table-column
             label="Actions">
             <template slot-scope="scope">
-              <el-button @click="handleClick(scope.row)" type="text" size="small">Edit</el-button>
-              <el-button type="text" size="small">Delete</el-button>
+              <el-button type="text" size="small">Edit</el-button>
+              <el-button @click="handleDeleteClick" type="text" size="small">Delete</el-button>
             </template>
           </el-table-column>
         </el-table>
@@ -118,8 +118,8 @@
           <el-table-column
             label="Actions">
             <template slot-scope="scope">
-              <el-button @click="handleClick(scope.row)" type="text" size="small">Edit</el-button>
-              <el-button type="text" size="small">Delete</el-button>
+              <el-button type="text" size="small">Edit</el-button>
+              <el-button @click="handleDeleteClick" type="text" size="small">Delete</el-button>
             </template>
           </el-table-column>
         </el-table>
@@ -171,8 +171,8 @@
           <el-table-column
             label="Actions">
             <template slot-scope="scope">
-              <el-button @click="handleClick(scope.row)" type="text" size="small">Restore</el-button>
-              <el-button type="text" size="small">Remove</el-button>
+              <el-button type="text" size="small">Restore</el-button>
+              <el-button @click="handleDeleteClick" type="text" size="small">Remove</el-button>
             </template>
           </el-table-column>
         </el-table>
@@ -211,8 +211,22 @@
       }
     },
     methods: {
-      handleClick (row) {
-        console.log(row)
+      handleDeleteClick () {
+        this.$confirm('此操作将永久删除该文件, 是否继续?', '提示', {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning'
+        }).then(() => {
+          this.$message({
+            type: 'success',
+            message: '删除成功!'
+          });
+        }).catch(() => {
+          this.$message({
+            type: 'info',
+            message: '已取消删除'
+          });
+        });
       },
       indexMethod (index) {
         return index
